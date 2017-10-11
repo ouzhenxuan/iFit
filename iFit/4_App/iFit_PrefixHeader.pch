@@ -1,0 +1,24 @@
+//
+//  EHGhostDrone_PrefixHeader.pch
+//  EHGhostDrone3
+//
+//  Created by XL on 2017/4/20.
+//  Copyright © 2017年 Ehang. All rights reserved.
+//
+
+#ifndef iFit_PrefixHeader_pch
+#define iFit_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "ZXConstants.h"
+#import "Masonry.h"
+
+#endif
+
+#endif /* iFit_PrefixHeader_pch */

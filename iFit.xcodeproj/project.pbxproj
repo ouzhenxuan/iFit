@@ -7,25 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F575FE081F62DF1700836131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F575FE071F62DF1700836131 /* main.m */; };
-		F575FE0B1F62DF1700836131 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F575FE0A1F62DF1700836131 /* AppDelegate.m */; };
-		F575FE0E1F62DF1700836131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F575FE0D1F62DF1700836131 /* ViewController.m */; };
-		F575FE111F62DF1700836131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F575FE0F1F62DF1700836131 /* Main.storyboard */; };
-		F575FE131F62DF1700836131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F575FE121F62DF1700836131 /* Assets.xcassets */; };
-		F575FE161F62DF1700836131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F575FE141F62DF1700836131 /* LaunchScreen.storyboard */; };
+		BADB8213D0E90B48E6ED0BE9 /* libPods-iFit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE648AF26E6F4696212D5C2E /* libPods-iFit.a */; };
+		F5060BB21F8CA90E006CA345 /* FootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5060BB11F8CA90E006CA345 /* FootTableView.m */; };
+		F588A2641F7627FA00BCD61E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2551F7627FA00BCD61E /* HomeViewController.m */; };
+		F588A2651F7627FA00BCD61E /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2581F7627FA00BCD61E /* CircleView.m */; };
+		F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A25A1F7627FA00BCD61E /* LabelNumView.m */; };
+		F588A2671F7627FA00BCD61E /* LabelNumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F588A25B1F7627FA00BCD61E /* LabelNumView.xib */; };
+		F588A2681F7627FA00BCD61E /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A25D1F7627FA00BCD61E /* PreviewView.m */; };
+		F588A27F1F76284A00BCD61E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A26D1F76284A00BCD61E /* AppDelegate.m */; };
+		F588A2801F76284A00BCD61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F588A26E1F76284A00BCD61E /* Assets.xcassets */; };
+		F588A2811F76284A00BCD61E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588A26F1F76284A00BCD61E /* LaunchScreen.storyboard */; };
+		F588A2821F76284A00BCD61E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F588A2711F76284A00BCD61E /* Main.storyboard */; };
+		F588A2831F76284A00BCD61E /* ZXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2751F76284A00BCD61E /* ZXNavigationController.m */; };
+		F588A2841F76284A00BCD61E /* ZXTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2771F76284A00BCD61E /* ZXTabBarViewController.m */; };
+		F588A2851F76284A00BCD61E /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F588A27A1F76284A00BCD61E /* icon_back@3x.png */; };
+		F588A2861F76284A00BCD61E /* icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F588A27B1F76284A00BCD61E /* icon_close@3x.png */; };
+		F588A2871F76284A00BCD61E /* icon_info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F588A27C1F76284A00BCD61E /* icon_info@3x.png */; };
+		F588A2891F76284A00BCD61E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A27E1F76284A00BCD61E /* main.m */; };
+		F588A28D1F7628FF00BCD61E /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A28C1F7628FF00BCD61E /* UIColor+HexColor.m */; };
+		F588A28F1F762AA900BCD61E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F588A28E1F762AA900BCD61E /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74864EE7BDF8E98398891F65 /* Pods-iFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFit/Pods-iFit.debug.xcconfig"; sourceTree = "<group>"; };
+		94ED9291719A3529C2E1BC10 /* Pods-iFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFit.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFit/Pods-iFit.release.xcconfig"; sourceTree = "<group>"; };
+		EE648AF26E6F4696212D5C2E /* libPods-iFit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iFit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5060BB01F8CA90E006CA345 /* FootTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootTableView.h; sourceTree = "<group>"; };
+		F5060BB11F8CA90E006CA345 /* FootTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootTableView.m; sourceTree = "<group>"; };
 		F575FE031F62DF1700836131 /* iFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F575FE071F62DF1700836131 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F575FE091F62DF1700836131 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F575FE0A1F62DF1700836131 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F575FE0C1F62DF1700836131 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F575FE0D1F62DF1700836131 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F575FE101F62DF1700836131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F575FE121F62DF1700836131 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F575FE151F62DF1700836131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F575FE171F62DF1700836131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F588A24F1F7627FA00BCD61E /* ZXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXConstants.h; sourceTree = "<group>"; };
+		F588A2541F7627FA00BCD61E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F588A2551F7627FA00BCD61E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		F588A2571F7627FA00BCD61E /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
+		F588A2581F7627FA00BCD61E /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		F588A2591F7627FA00BCD61E /* LabelNumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelNumView.h; sourceTree = "<group>"; };
+		F588A25A1F7627FA00BCD61E /* LabelNumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelNumView.m; sourceTree = "<group>"; };
+		F588A25B1F7627FA00BCD61E /* LabelNumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelNumView.xib; sourceTree = "<group>"; };
+		F588A25C1F7627FA00BCD61E /* PreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
+		F588A25D1F7627FA00BCD61E /* PreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
+		F588A26C1F76284A00BCD61E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F588A26D1F76284A00BCD61E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F588A26E1F76284A00BCD61E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F588A2701F76284A00BCD61E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F588A2721F76284A00BCD61E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F588A2741F76284A00BCD61E /* ZXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXNavigationController.h; sourceTree = "<group>"; };
+		F588A2751F76284A00BCD61E /* ZXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXNavigationController.m; sourceTree = "<group>"; };
+		F588A2761F76284A00BCD61E /* ZXTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXTabBarViewController.h; sourceTree = "<group>"; };
+		F588A2771F76284A00BCD61E /* ZXTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXTabBarViewController.m; sourceTree = "<group>"; };
+		F588A2781F76284A00BCD61E /* iFit_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iFit_PrefixHeader.pch; sourceTree = "<group>"; };
+		F588A27A1F76284A00BCD61E /* icon_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@3x.png"; sourceTree = "<group>"; };
+		F588A27B1F76284A00BCD61E /* icon_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close@3x.png"; sourceTree = "<group>"; };
+		F588A27C1F76284A00BCD61E /* icon_info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_info@3x.png"; sourceTree = "<group>"; };
+		F588A27E1F76284A00BCD61E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F588A28B1F7628FF00BCD61E /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		F588A28C1F7628FF00BCD61E /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		F588A28E1F762AA900BCD61E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +69,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADB8213D0E90B48E6ED0BE9 /* libPods-iFit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46D887C2DF1278C6F2451625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE648AF26E6F4696212D5C2E /* libPods-iFit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8919820AAA98F0A8C4F66AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74864EE7BDF8E98398891F65 /* Pods-iFit.debug.xcconfig */,
+				94ED9291719A3529C2E1BC10 /* Pods-iFit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F575FDFA1F62DF1700836131 = {
 			isa = PBXGroup;
 			children = (
 				F575FE051F62DF1700836131 /* iFit */,
 				F575FE041F62DF1700836131 /* Products */,
+				E8919820AAA98F0A8C4F66AB /* Pods */,
+				46D887C2DF1278C6F2451625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,25 +114,117 @@
 		F575FE051F62DF1700836131 /* iFit */ = {
 			isa = PBXGroup;
 			children = (
-				F575FE091F62DF1700836131 /* AppDelegate.h */,
-				F575FE0A1F62DF1700836131 /* AppDelegate.m */,
-				F575FE0C1F62DF1700836131 /* ViewController.h */,
-				F575FE0D1F62DF1700836131 /* ViewController.m */,
-				F575FE0F1F62DF1700836131 /* Main.storyboard */,
-				F575FE121F62DF1700836131 /* Assets.xcassets */,
-				F575FE141F62DF1700836131 /* LaunchScreen.storyboard */,
-				F575FE171F62DF1700836131 /* Info.plist */,
-				F575FE061F62DF1700836131 /* Supporting Files */,
+				F588A24E1F7627FA00BCD61E /* 1_Tools */,
+				F588A2501F7627FA00BCD61E /* 3_Modules */,
+				F588A26B1F76284A00BCD61E /* 4_App */,
 			);
 			path = iFit;
 			sourceTree = "<group>";
 		};
-		F575FE061F62DF1700836131 /* Supporting Files */ = {
+		F588A24E1F7627FA00BCD61E /* 1_Tools */ = {
 			isa = PBXGroup;
 			children = (
-				F575FE071F62DF1700836131 /* main.m */,
+				F588A28A1F7628B800BCD61E /* Category */,
+				F588A24F1F7627FA00BCD61E /* ZXConstants.h */,
 			);
-			name = "Supporting Files";
+			path = 1_Tools;
+			sourceTree = "<group>";
+		};
+		F588A2501F7627FA00BCD61E /* 3_Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F588A2511F7627FA00BCD61E /* AddMenu */,
+				F588A2521F7627FA00BCD61E /* Detail */,
+				F588A2531F7627FA00BCD61E /* Home */,
+			);
+			path = 3_Modules;
+			sourceTree = "<group>";
+		};
+		F588A2511F7627FA00BCD61E /* AddMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddMenu;
+			sourceTree = "<group>";
+		};
+		F588A2521F7627FA00BCD61E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F588A2531F7627FA00BCD61E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F588A2541F7627FA00BCD61E /* HomeViewController.h */,
+				F588A2551F7627FA00BCD61E /* HomeViewController.m */,
+				F588A2561F7627FA00BCD61E /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F588A2561F7627FA00BCD61E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F588A2571F7627FA00BCD61E /* CircleView.h */,
+				F588A2581F7627FA00BCD61E /* CircleView.m */,
+				F588A2591F7627FA00BCD61E /* LabelNumView.h */,
+				F588A25A1F7627FA00BCD61E /* LabelNumView.m */,
+				F588A25B1F7627FA00BCD61E /* LabelNumView.xib */,
+				F588A25C1F7627FA00BCD61E /* PreviewView.h */,
+				F588A25D1F7627FA00BCD61E /* PreviewView.m */,
+				F5060BB01F8CA90E006CA345 /* FootTableView.h */,
+				F5060BB11F8CA90E006CA345 /* FootTableView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F588A26B1F76284A00BCD61E /* 4_App */ = {
+			isa = PBXGroup;
+			children = (
+				F588A28E1F762AA900BCD61E /* Info.plist */,
+				F588A26C1F76284A00BCD61E /* AppDelegate.h */,
+				F588A26D1F76284A00BCD61E /* AppDelegate.m */,
+				F588A26E1F76284A00BCD61E /* Assets.xcassets */,
+				F588A26F1F76284A00BCD61E /* LaunchScreen.storyboard */,
+				F588A2711F76284A00BCD61E /* Main.storyboard */,
+				F588A2731F76284A00BCD61E /* Controller */,
+				F588A2781F76284A00BCD61E /* iFit_PrefixHeader.pch */,
+				F588A2791F76284A00BCD61E /* Images */,
+				F588A27E1F76284A00BCD61E /* main.m */,
+			);
+			path = 4_App;
+			sourceTree = "<group>";
+		};
+		F588A2731F76284A00BCD61E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F588A2741F76284A00BCD61E /* ZXNavigationController.h */,
+				F588A2751F76284A00BCD61E /* ZXNavigationController.m */,
+				F588A2761F76284A00BCD61E /* ZXTabBarViewController.h */,
+				F588A2771F76284A00BCD61E /* ZXTabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F588A2791F76284A00BCD61E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F588A27A1F76284A00BCD61E /* icon_back@3x.png */,
+				F588A27B1F76284A00BCD61E /* icon_close@3x.png */,
+				F588A27C1F76284A00BCD61E /* icon_info@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F588A28A1F7628B800BCD61E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F588A28B1F7628FF00BCD61E /* UIColor+HexColor.h */,
+				F588A28C1F7628FF00BCD61E /* UIColor+HexColor.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F575FE1A1F62DF1700836131 /* Build configuration list for PBXNativeTarget "iFit" */;
 			buildPhases = (
+				31785455BE9FA376DEDD21CA /* [CP] Check Pods Manifest.lock */,
 				F575FDFF1F62DF1700836131 /* Sources */,
 				F575FE001F62DF1700836131 /* Frameworks */,
 				F575FE011F62DF1700836131 /* Resources */,
+				14DA2ED54A003E932573929E /* [CP] Embed Pods Frameworks */,
+				A048FE635E9FB358F8CB40C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,42 +289,102 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F575FE161F62DF1700836131 /* LaunchScreen.storyboard in Resources */,
-				F575FE131F62DF1700836131 /* Assets.xcassets in Resources */,
-				F575FE111F62DF1700836131 /* Main.storyboard in Resources */,
+				F588A28F1F762AA900BCD61E /* Info.plist in Resources */,
+				F588A2811F76284A00BCD61E /* LaunchScreen.storyboard in Resources */,
+				F588A2861F76284A00BCD61E /* icon_close@3x.png in Resources */,
+				F588A2801F76284A00BCD61E /* Assets.xcassets in Resources */,
+				F588A2871F76284A00BCD61E /* icon_info@3x.png in Resources */,
+				F588A2671F7627FA00BCD61E /* LabelNumView.xib in Resources */,
+				F588A2821F76284A00BCD61E /* Main.storyboard in Resources */,
+				F588A2851F76284A00BCD61E /* icon_back@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14DA2ED54A003E932573929E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iFit/Pods-iFit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31785455BE9FA376DEDD21CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A048FE635E9FB358F8CB40C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iFit/Pods-iFit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F575FDFF1F62DF1700836131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F575FE0E1F62DF1700836131 /* ViewController.m in Sources */,
-				F575FE0B1F62DF1700836131 /* AppDelegate.m in Sources */,
-				F575FE081F62DF1700836131 /* main.m in Sources */,
+				F588A2841F76284A00BCD61E /* ZXTabBarViewController.m in Sources */,
+				F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */,
+				F588A2681F7627FA00BCD61E /* PreviewView.m in Sources */,
+				F588A2651F7627FA00BCD61E /* CircleView.m in Sources */,
+				F588A28D1F7628FF00BCD61E /* UIColor+HexColor.m in Sources */,
+				F5060BB21F8CA90E006CA345 /* FootTableView.m in Sources */,
+				F588A2831F76284A00BCD61E /* ZXNavigationController.m in Sources */,
+				F588A2641F7627FA00BCD61E /* HomeViewController.m in Sources */,
+				F588A2891F76284A00BCD61E /* main.m in Sources */,
+				F588A27F1F76284A00BCD61E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F575FE0F1F62DF1700836131 /* Main.storyboard */ = {
+		F588A26F1F76284A00BCD61E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F575FE101F62DF1700836131 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F575FE141F62DF1700836131 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F575FE151F62DF1700836131 /* Base */,
+				F588A2701F76284A00BCD61E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F588A2711F76284A00BCD61E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F588A2721F76284A00BCD61E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -273,9 +484,11 @@
 		};
 		F575FE1B1F62DF1700836131 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74864EE7BDF8E98398891F65 /* Pods-iFit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GTMKG6EH2C;
+				GCC_PREFIX_HEADER = iFit/4_App/iFit_PrefixHeader.pch;
 				INFOPLIST_FILE = iFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozx.iFit;
@@ -285,9 +498,11 @@
 		};
 		F575FE1C1F62DF1700836131 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94ED9291719A3529C2E1BC10 /* Pods-iFit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GTMKG6EH2C;
+				GCC_PREFIX_HEADER = iFit/4_App/iFit_PrefixHeader.pch;
 				INFOPLIST_FILE = iFit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozx.iFit;
@@ -314,6 +529,7 @@
 				F575FE1C1F62DF1700836131 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

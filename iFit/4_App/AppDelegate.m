@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HomeViewController.h"
+#import "ZXNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -58,9 +59,11 @@
 }
 
 - (void)chooseRootViewController{
-    ViewController * homeVc = [[ViewController alloc] init];
+    HomeViewController * homeVc = [[HomeViewController alloc] init];
     
-    _window.rootViewController = homeVc;
+    ZXNavigationController * nav = [[ZXNavigationController alloc] initWithRootViewController:homeVc];
+    
+    _window.rootViewController = nav;
     
 }
 
