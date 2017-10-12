@@ -72,7 +72,7 @@
         make.height.mas_equalTo(@206);
     }];
     
-    _footTableView = [[FootTableView alloc] initWithFrame:CGRectMake(0, 300, ScreenBoundsWidth, 300) style:UITableViewStylePlain];
+    _footTableView = [[FootTableView alloc] initWithFrame:CGRectMake(0, 300, ScreenBoundsWidth, 300) style:UITableViewStyleGrouped];
     [_footTableView registerTheTableViewHeight:^(double height) {
         NSLog(@"%f",height);
         [weakSelf.footTableView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -81,10 +81,12 @@
     }];
     [_grayView addSubview:_footTableView];
     
+    _footTableView.layer.cornerRadius = 10;
+    
     [self.footTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.preview.mas_bottom).with.offset(14);
-        make.left.equalTo(weakSelf.grayView).with.offset(0);
-        make.right.equalTo(weakSelf.grayView).with.offset(-0);
+        make.left.equalTo(weakSelf.grayView).with.offset(20);
+        make.right.equalTo(weakSelf.grayView).with.offset(-20);
         make.height.mas_equalTo(@0);
     }];
 }

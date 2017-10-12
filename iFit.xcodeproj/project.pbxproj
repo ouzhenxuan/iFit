@@ -26,6 +26,12 @@
 		F588A2891F76284A00BCD61E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A27E1F76284A00BCD61E /* main.m */; };
 		F588A28D1F7628FF00BCD61E /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A28C1F7628FF00BCD61E /* UIColor+HexColor.m */; };
 		F588A28F1F762AA900BCD61E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F588A28E1F762AA900BCD61E /* Info.plist */; };
+		F5C71CFF1F8F0F2A0035DB72 /* FootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C71CFE1F8F0F2A0035DB72 /* FootModel.m */; };
+		F5C71D021F8F1A420035DB72 /* FootHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C71D011F8F1A420035DB72 /* FootHeaderView.m */; };
+		F5C71D041F8F1A530035DB72 /* FootHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C71D031F8F1A530035DB72 /* FootHeaderView.xib */; };
+		F5D91C381F8DFC9400449981 /* FootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D91C361F8DFC9400449981 /* FootTableViewCell.m */; };
+		F5D91C391F8DFC9400449981 /* FootTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */; };
+		F5D91C3D1F8E031500449981 /* FootCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D91C3C1F8E031500449981 /* FootCategoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,16 @@
 		F588A28B1F7628FF00BCD61E /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		F588A28C1F7628FF00BCD61E /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		F588A28E1F762AA900BCD61E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C71CFD1F8F0F2A0035DB72 /* FootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootModel.h; sourceTree = "<group>"; };
+		F5C71CFE1F8F0F2A0035DB72 /* FootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootModel.m; sourceTree = "<group>"; };
+		F5C71D001F8F1A420035DB72 /* FootHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootHeaderView.h; sourceTree = "<group>"; };
+		F5C71D011F8F1A420035DB72 /* FootHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootHeaderView.m; sourceTree = "<group>"; };
+		F5C71D031F8F1A530035DB72 /* FootHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootHeaderView.xib; sourceTree = "<group>"; };
+		F5D91C351F8DFC9400449981 /* FootTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootTableViewCell.h; sourceTree = "<group>"; };
+		F5D91C361F8DFC9400449981 /* FootTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootTableViewCell.m; sourceTree = "<group>"; };
+		F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootTableViewCell.xib; sourceTree = "<group>"; };
+		F5D91C3B1F8E031500449981 /* FootCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootCategoryModel.h; sourceTree = "<group>"; };
+		F5D91C3C1F8E031500449981 /* FootCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootCategoryModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +173,7 @@
 		F588A2531F7627FA00BCD61E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F5D91C3A1F8E02E500449981 /* Model */,
 				F588A2541F7627FA00BCD61E /* HomeViewController.h */,
 				F588A2551F7627FA00BCD61E /* HomeViewController.m */,
 				F588A2561F7627FA00BCD61E /* Views */,
@@ -176,6 +193,12 @@
 				F588A25D1F7627FA00BCD61E /* PreviewView.m */,
 				F5060BB01F8CA90E006CA345 /* FootTableView.h */,
 				F5060BB11F8CA90E006CA345 /* FootTableView.m */,
+				F5D91C351F8DFC9400449981 /* FootTableViewCell.h */,
+				F5D91C361F8DFC9400449981 /* FootTableViewCell.m */,
+				F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */,
+				F5C71D001F8F1A420035DB72 /* FootHeaderView.h */,
+				F5C71D011F8F1A420035DB72 /* FootHeaderView.m */,
+				F5C71D031F8F1A530035DB72 /* FootHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +248,17 @@
 				F588A28C1F7628FF00BCD61E /* UIColor+HexColor.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		F5D91C3A1F8E02E500449981 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5D91C3B1F8E031500449981 /* FootCategoryModel.h */,
+				F5D91C3C1F8E031500449981 /* FootCategoryModel.m */,
+				F5C71CFD1F8F0F2A0035DB72 /* FootModel.h */,
+				F5C71CFE1F8F0F2A0035DB72 /* FootModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +323,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D91C391F8DFC9400449981 /* FootTableViewCell.xib in Resources */,
 				F588A28F1F762AA900BCD61E /* Info.plist in Resources */,
 				F588A2811F76284A00BCD61E /* LaunchScreen.storyboard in Resources */,
 				F588A2861F76284A00BCD61E /* icon_close@3x.png in Resources */,
 				F588A2801F76284A00BCD61E /* Assets.xcassets in Resources */,
 				F588A2871F76284A00BCD61E /* icon_info@3x.png in Resources */,
 				F588A2671F7627FA00BCD61E /* LabelNumView.xib in Resources */,
+				F5C71D041F8F1A530035DB72 /* FootHeaderView.xib in Resources */,
 				F588A2821F76284A00BCD61E /* Main.storyboard in Resources */,
 				F588A2851F76284A00BCD61E /* icon_back@3x.png in Resources */,
 			);
@@ -356,9 +392,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F588A2841F76284A00BCD61E /* ZXTabBarViewController.m in Sources */,
+				F5D91C3D1F8E031500449981 /* FootCategoryModel.m in Sources */,
 				F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */,
 				F588A2681F7627FA00BCD61E /* PreviewView.m in Sources */,
+				F5D91C381F8DFC9400449981 /* FootTableViewCell.m in Sources */,
+				F5C71CFF1F8F0F2A0035DB72 /* FootModel.m in Sources */,
 				F588A2651F7627FA00BCD61E /* CircleView.m in Sources */,
+				F5C71D021F8F1A420035DB72 /* FootHeaderView.m in Sources */,
 				F588A28D1F7628FF00BCD61E /* UIColor+HexColor.m in Sources */,
 				F5060BB21F8CA90E006CA345 /* FootTableView.m in Sources */,
 				F588A2831F76284A00BCD61E /* ZXNavigationController.m in Sources */,
