@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		BADB8213D0E90B48E6ED0BE9 /* libPods-iFit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE648AF26E6F4696212D5C2E /* libPods-iFit.a */; };
 		F5060BB21F8CA90E006CA345 /* FootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5060BB11F8CA90E006CA345 /* FootTableView.m */; };
+		F5691E331F9F532600101301 /* LeftHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691E321F9F532600101301 /* LeftHomeView.m */; };
+		F5691E391F9F57A000101301 /* PSDrawerManager.h in Sources */ = {isa = PBXBuildFile; fileRef = F5691E351F9F55FF00101301 /* PSDrawerManager.h */; };
+		F5691E3A1F9F57A000101301 /* PSDrawerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691E361F9F55FF00101301 /* PSDrawerManager.m */; };
+		F5691E3B1F9F57A000101301 /* UIView+leoAdd.h in Sources */ = {isa = PBXBuildFile; fileRef = F5691E371F9F55FF00101301 /* UIView+leoAdd.h */; };
+		F5691E3C1F9F57A000101301 /* UIView+leoAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691E381F9F55FF00101301 /* UIView+leoAdd.m */; };
 		F588A2641F7627FA00BCD61E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2551F7627FA00BCD61E /* HomeViewController.m */; };
 		F588A2651F7627FA00BCD61E /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2581F7627FA00BCD61E /* CircleView.m */; };
 		F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A25A1F7627FA00BCD61E /* LabelNumView.m */; };
@@ -40,6 +45,12 @@
 		EE648AF26E6F4696212D5C2E /* libPods-iFit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iFit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5060BB01F8CA90E006CA345 /* FootTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootTableView.h; sourceTree = "<group>"; };
 		F5060BB11F8CA90E006CA345 /* FootTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootTableView.m; sourceTree = "<group>"; };
+		F5691E311F9F532600101301 /* LeftHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftHomeView.h; sourceTree = "<group>"; };
+		F5691E321F9F532600101301 /* LeftHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftHomeView.m; sourceTree = "<group>"; };
+		F5691E351F9F55FF00101301 /* PSDrawerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSDrawerManager.h; sourceTree = "<group>"; };
+		F5691E361F9F55FF00101301 /* PSDrawerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSDrawerManager.m; sourceTree = "<group>"; };
+		F5691E371F9F55FF00101301 /* UIView+leoAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+leoAdd.h"; sourceTree = "<group>"; };
+		F5691E381F9F55FF00101301 /* UIView+leoAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+leoAdd.m"; sourceTree = "<group>"; };
 		F575FE031F62DF1700836131 /* iFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F588A24F1F7627FA00BCD61E /* ZXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXConstants.h; sourceTree = "<group>"; };
 		F588A2541F7627FA00BCD61E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -109,6 +120,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F5691E271F9F510400101301 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				F5691E341F9F55FF00101301 /* PSDrawerManager */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		F5691E2D1F9F514200101301 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F588A2541F7627FA00BCD61E /* HomeViewController.h */,
+				F588A2551F7627FA00BCD61E /* HomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F5691E341F9F55FF00101301 /* PSDrawerManager */ = {
+			isa = PBXGroup;
+			children = (
+				F5691E351F9F55FF00101301 /* PSDrawerManager.h */,
+				F5691E361F9F55FF00101301 /* PSDrawerManager.m */,
+				F5691E371F9F55FF00101301 /* UIView+leoAdd.h */,
+				F5691E381F9F55FF00101301 /* UIView+leoAdd.m */,
+			);
+			path = PSDrawerManager;
+			sourceTree = "<group>";
+		};
 		F575FDFA1F62DF1700836131 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +179,7 @@
 		F588A24E1F7627FA00BCD61E /* 1_Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F5691E271F9F510400101301 /* ThirdParty */,
 				F588A28A1F7628B800BCD61E /* Category */,
 				F588A24F1F7627FA00BCD61E /* ZXConstants.h */,
 			);
@@ -173,9 +213,8 @@
 		F588A2531F7627FA00BCD61E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F5691E2D1F9F514200101301 /* Controllers */,
 				F5D91C3A1F8E02E500449981 /* Model */,
-				F588A2541F7627FA00BCD61E /* HomeViewController.h */,
-				F588A2551F7627FA00BCD61E /* HomeViewController.m */,
 				F588A2561F7627FA00BCD61E /* Views */,
 			);
 			path = Home;
@@ -199,6 +238,8 @@
 				F5C71D001F8F1A420035DB72 /* FootHeaderView.h */,
 				F5C71D011F8F1A420035DB72 /* FootHeaderView.m */,
 				F5C71D031F8F1A530035DB72 /* FootHeaderView.xib */,
+				F5691E311F9F532600101301 /* LeftHomeView.h */,
+				F5691E321F9F532600101301 /* LeftHomeView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,7 +336,7 @@
 				TargetAttributes = {
 					F575FE021F62DF1700836131 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = GTMKG6EH2C;
+						DevelopmentTeam = FT3R23CEY6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -360,13 +401,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iFit-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A048FE635E9FB358F8CB40C5 /* [CP] Copy Pods Resources */ = {
@@ -391,6 +435,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5691E391F9F57A000101301 /* PSDrawerManager.h in Sources */,
+				F5691E3A1F9F57A000101301 /* PSDrawerManager.m in Sources */,
+				F5691E3B1F9F57A000101301 /* UIView+leoAdd.h in Sources */,
+				F5691E3C1F9F57A000101301 /* UIView+leoAdd.m in Sources */,
 				F588A2841F76284A00BCD61E /* ZXTabBarViewController.m in Sources */,
 				F5D91C3D1F8E031500449981 /* FootCategoryModel.m in Sources */,
 				F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */,
@@ -405,6 +453,7 @@
 				F588A2641F7627FA00BCD61E /* HomeViewController.m in Sources */,
 				F588A2891F76284A00BCD61E /* main.m in Sources */,
 				F588A27F1F76284A00BCD61E /* AppDelegate.m in Sources */,
+				F5691E331F9F532600101301 /* LeftHomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,11 +575,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74864EE7BDF8E98398891F65 /* Pods-iFit.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GTMKG6EH2C;
+				DEVELOPMENT_TEAM = FT3R23CEY6;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				GCC_PREFIX_HEADER = iFit/4_App/iFit_PrefixHeader.pch;
 				INFOPLIST_FILE = iFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Masonry\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozx.iFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -540,11 +598,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94ED9291719A3529C2E1BC10 /* Pods-iFit.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GTMKG6EH2C;
+				DEVELOPMENT_TEAM = FT3R23CEY6;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				GCC_PREFIX_HEADER = iFit/4_App/iFit_PrefixHeader.pch;
 				INFOPLIST_FILE = iFit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Masonry\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ozx.iFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

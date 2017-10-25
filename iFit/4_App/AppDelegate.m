@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "ZXNavigationController.h"
+#import "PSDrawerManager.h"
+#import "LeftHomeView.h"
 
 @interface AppDelegate ()
 
@@ -62,6 +64,10 @@
     HomeViewController * homeVc = [[HomeViewController alloc] init];
     
     ZXNavigationController * nav = [[ZXNavigationController alloc] initWithRootViewController:homeVc];
+    
+    LeftHomeView * leftView = [[LeftHomeView alloc] initWithFrame:CGRectMake(-ScreenBoundsWidth * (1- kLeftWidthScale), 0, ScreenBoundsWidth * kLeftWidthScale, ScreenBoundsHeight)];
+    
+    [[PSDrawerManager sharedInstance] installCenterViewController:nav leftView:leftView];
     
     _window.rootViewController = nav;
     

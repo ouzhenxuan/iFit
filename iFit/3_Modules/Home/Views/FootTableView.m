@@ -10,6 +10,7 @@
 #import "FootCategoryModel.h"
 #import "FootTableViewCell.h"
 #import "FootModel.h"
+#import "FootHeaderView.h"
 
 @interface FootTableView () <UITableViewDelegate,UITableViewDataSource>
 
@@ -36,7 +37,7 @@
         
         self.delegate = self;
         self.dataSource = self;
-//        self.scrollEnabled = NO;
+        self.scrollEnabled = NO;
         [self setUpTheDate];
     }
     
@@ -51,16 +52,16 @@
     NSMutableArray * array = [NSMutableArray array];
     [array addObject:model];
     
-    FootCategoryModel * breakfast = [[FootCategoryModel alloc] initModelWithUrl:@"123" title:@"早餐" suggest:@"建议280~370千卡" footArray:array];
+    FootCategoryModel * breakfast = [[FootCategoryModel alloc] initModelWithUrl:@"breakfast" title:@"早餐" suggest:@"建议280~370千卡" footArray:array];
     [_footCategoryArray addObject:breakfast];
     
-    FootCategoryModel * lunch = [[FootCategoryModel alloc] initModelWithUrl:@"123" title:@"午餐" suggest:@"建议440~600千卡" footArray:array];
+    FootCategoryModel * lunch = [[FootCategoryModel alloc] initModelWithUrl:@"lunch" title:@"午餐" suggest:@"建议440~600千卡" footArray:array];
     [_footCategoryArray addObject:lunch];
     
-    FootCategoryModel * dinner = [[FootCategoryModel alloc] initModelWithUrl:@"123" title:@"晚餐" suggest:@"建议330~450千卡" footArray:array];
+    FootCategoryModel * dinner = [[FootCategoryModel alloc] initModelWithUrl:@"dinner.png" title:@"晚餐" suggest:@"建议330~450千卡" footArray:array];
     [_footCategoryArray addObject:dinner];
     
-    FootCategoryModel * water = [[FootCategoryModel alloc] initModelWithUrl:@"123" title:@"水" suggest:@"8杯" footArray:array];
+    FootCategoryModel * water = [[FootCategoryModel alloc] initModelWithUrl:@"snack.png" title:@"水" suggest:@"8杯" footArray:array];
     [_footCategoryArray addObject:water];
     
 }
@@ -73,7 +74,14 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    heightReflashBlock(64*_footCategoryArray.count);
+    int footCount = 0;
+    for (FootCategoryModel * model  in _footCategoryArray) {
+        footCount = model.footArray.count + footCount;
+    }
+    
+    double tableViewHeight = 64 * _footCategoryArray.count + 64 * footCount;
+    
+    heightReflashBlock(tableViewHeight);
 }
 
 #pragma tableview delegate
@@ -93,9 +101,6 @@
         //这里需要注意的是为什么是lastObject 应为该Xib中只有一个元素
         
         FootCategoryModel * model = _footCategoryArray[indexPath.section];
-//        cell.title.text = model.title;
-//        cell.suggestLabel.text = model.suggest;
-
         FootModel * footModel = model.footArray[indexPath.row];
         cell.title.text = [NSString stringWithFormat:@"calorie is %f",footModel.calorie];
         cell.suggestLabel.text = [NSString stringWithFormat:@"fat is %f",footModel.calorie];
@@ -104,11 +109,19 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 100 )];
-    view.backgroundColor = [UIColor yellowColor];
+    FootCategoryModel * model = _footCategoryArray[section];
     
+    FootHeaderView * headerView = [[[NSBundle mainBundle] loadNibNamed:@"FootHeaderView" owner:nil options:nil] lastObject];
     
-    return view;
+    headerView.title.text = model.title;
+    headerView.suggestLabel.text = model.suggest;
+    headerView.cellImage.image = [UIImage imageNamed:model.url];
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 64;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

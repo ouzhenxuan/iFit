@@ -10,6 +10,7 @@
 #import "PreviewView.h"
 #import "UIColor+HexColor.h"
 #import "FootTableView.h"
+#import "PSDrawerManager.h"
 
 @interface HomeViewController () <UIScrollViewDelegate>
 //view
@@ -30,16 +31,38 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"星期五";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_info.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openTheInfoController)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_info.png"] style:UIBarButtonItemStylePlain target:self action:@selector(leftButtonClick)];
     
     [self setUpTheScrollView];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[PSDrawerManager sharedInstance] beginDragResponse];
+    
+}
 
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 }
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[PSDrawerManager sharedInstance] resetShowType:PSDrawerManagerShowCenter];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[PSDrawerManager sharedInstance] resetShowType:PSDrawerManagerShowCenter];
+}
+
+-(void)leftButtonClick
+{
+    [[PSDrawerManager sharedInstance] resetShowType:PSDrawerManagerShowLeft];
+}
+
 
 - (void)setUpTheScrollView{
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenBoundsWidth, ScreenBoundsHeight-64)];
@@ -50,7 +73,7 @@
     [_scrollView setScrollEnabled:YES];
     
     _grayView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenBoundsWidth, 1080)];
-    _grayView.backgroundColor = [UIColor colorWithHexString:@"#B7B7B7"];
+    _grayView.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
     
     // 隐藏水平滚动条
     _scrollView.showsHorizontalScrollIndicator = NO;
@@ -81,7 +104,7 @@
     }];
     [_grayView addSubview:_footTableView];
     
-    _footTableView.layer.cornerRadius = 10;
+    _footTableView.layer.cornerRadius = 0;
     
     [self.footTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.preview.mas_bottom).with.offset(14);
@@ -117,12 +140,6 @@
 {
     return YES;
 }
-
-
-- (void)openTheInfoController{
-    NSLog(@"open");
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
