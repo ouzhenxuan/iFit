@@ -39,9 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[PSDrawerManager sharedInstance] beginDragResponse];
-    
 }
-
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
