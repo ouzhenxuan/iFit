@@ -8,6 +8,7 @@
 
 #import "ZXNavigationController.h"
 #import "ZXConstants.h"
+#import "PSDrawerManager.h"
 
 @interface ZXNavigationController ()<UINavigationControllerDelegate>
 
@@ -15,6 +16,7 @@
 @property (nonatomic , strong) id  popDelegate;
 /** 导航条内部的分割线 */
 @property (nonatomic , strong) UIImageView  *bottomDividingView;
+@property (nonatomic,strong) UIView * grayMaskView;
 
 @end
 
@@ -52,8 +54,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self setUpTheLeftGrayView];
     // Do any additional setup after loading the view.
+}
+
+/**
+ 设置左边侧滑控件出现时，主页上的灰色蒙版
+ */
+- (void)setUpTheLeftGrayView{
+    self.grayMaskView = [[UIView alloc] init];
+    self.grayMaskView.backgroundColor = [UIColor grayColor];
+    self.grayMaskView.alpha = 0.0;
+    self.grayMaskView.frame = CGRectMake(0, 0, ScreenBoundsWidth, ScreenBoundsHeight);
+    [self.view addSubview:self.grayMaskView];
+    [self.grayMaskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickGrayMaskView)]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showGrayView) name:kLeftViewWillAppear object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideGrayView) name:kLeftViewWillDisAppear object:nil];
+}
+
+- (void)clickGrayMaskView
+{
+    [[PSDrawerManager sharedInstance] resetShowType:PSDrawerManagerShowCenter];
+}
+
+- (void)hideGrayView
+{
+    [UIView animateWithDuration:0.15 animations:^{
+        self.grayMaskView.alpha = 0.0;
+    }];
+}
+
+- (void)showGrayView
+{
+    [UIView animateWithDuration:0.15 animations:^{
+        self.grayMaskView.alpha = 0.4;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
