@@ -19,6 +19,7 @@
 
 @property (nonatomic,strong) PreviewView * preview;
 @property (nonatomic,strong) FootTableView * footTableView;
+@property (nonatomic,strong) UIView * grayMaskView;
 
 //feild
 @property (nonatomic, assign) BOOL didSetupConstraints;
@@ -33,8 +34,14 @@
     self.title = @"星期五";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_info.png"] style:UIBarButtonItemStylePlain target:self action:@selector(leftButtonClick)];
     
+    
+    
+    
     [self setUpTheScrollView];
+    
+    [self setUpTheLeftGrayView];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -43,6 +50,8 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    [self.view bringSubviewToFront:self.grayMaskView];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -112,6 +121,40 @@
     }];
 }
 
+
+/**
+ 设置左边侧滑控件出现时，主页上的灰色蒙版
+ */
+- (void)setUpTheLeftGrayView{
+    self.grayMaskView = [[UIView alloc] init];
+    self.grayMaskView.backgroundColor = [UIColor grayColor];
+    self.grayMaskView.alpha = 0.0;
+    self.grayMaskView.frame = CGRectMake(0, 0, ScreenBoundsWidth, ScreenBoundsHeight);
+    [self.view addSubview:self.grayMaskView];
+    [self.grayMaskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickGrayMaskView)]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showGrayView) name:kLeftViewWillAppear object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideGrayView) name:kLeftViewWillDisAppear object:nil];
+}
+
+- (void)clickGrayMaskView
+{
+    [[PSDrawerManager sharedInstance] resetShowType:PSDrawerManagerShowCenter];
+}
+
+- (void)hideGrayView
+{
+    [UIView animateWithDuration:0.15 animations:^{
+        self.grayMaskView.alpha = 0.0;
+    }];
+}
+
+- (void)showGrayView
+{
+    [UIView animateWithDuration:0.15 animations:^{
+        self.grayMaskView.alpha = 0.4;
+    }];
+}
 
 -(void)viewDidLayoutSubviews
 {

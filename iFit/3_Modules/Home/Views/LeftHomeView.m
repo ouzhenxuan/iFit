@@ -39,7 +39,7 @@
         _tableview.dataSource = self;
         _tableview.delegate = self;
         
-        
+        [self setUpTheTableVie];
     }
     return self;
 }
