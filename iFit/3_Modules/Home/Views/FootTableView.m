@@ -79,7 +79,7 @@
         footCount = model.footArray.count + footCount;
     }
     
-    double tableViewHeight = 64 * _footCategoryArray.count + 64 * footCount;
+    double tableViewHeight = 64 * _footCategoryArray.count + 64 * footCount + 64;
     
     heightReflashBlock(tableViewHeight);
 }

@@ -11,6 +11,8 @@
 #import "UIColor+HexColor.h"
 #import "FootTableView.h"
 #import "PSDrawerManager.h"
+#import "ChooseFoodTypeView.h"
+#import "ChooseFoodTypeController.h"
 
 @interface HomeViewController () <UIScrollViewDelegate>
 //view
@@ -19,6 +21,8 @@
 
 @property (nonatomic,strong) PreviewView * preview;
 @property (nonatomic,strong) FootTableView * footTableView;
+
+
 
 
 //feild
@@ -33,11 +37,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"星期五";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_info.png"] style:UIBarButtonItemStylePlain target:self action:@selector(leftButtonClick)];
-    
-    
-    
-    
+//    添加scrollview里面的内容
     [self setUpTheScrollView];
+//    添加能拖动的添加按钮
+    [self setUpTheAddBtn];
+    
     
     
 }
@@ -69,10 +73,39 @@
     [[PSDrawerManager sharedInstance] resetShowType:PSDrawerManagerShowLeft];
 }
 
+- (void)setUpTheAddBtn{
+    UIButton * btn = [[UIButton alloc] init];
+    btn.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:btn];
+    btn.layer.cornerRadius = 25;
+    btn.clipsToBounds = YES;
+    [btn.titleLabel setText:@"+"];
+    
+    __weak typeof(self) weakSelf =self;
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(weakSelf.view).with.mas_offset(@-20);
+        make.height.mas_equalTo(@50);
+        make.width.mas_equalTo(@50);
+        make.centerX.equalTo(weakSelf.view);
+    }];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)btnClick:(UIButton *)btn{
+    ChooseFoodTypeController *vc = [[ChooseFoodTypeController alloc] init];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
+
+- (void)setUpButtons{
+    
+    
+}
 
 - (void)setUpTheScrollView{
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenBoundsWidth, ScreenBoundsHeight-64)];
-    _scrollView.backgroundColor = [UIColor yellowColor];
+//    _scrollView.backgroundColor = [UIColor yellowColor];
     
     [self.view addSubview:_scrollView];
     _scrollView.delegate = self;
@@ -118,6 +151,7 @@
         make.right.equalTo(weakSelf.grayView).with.offset(-20);
         make.height.mas_equalTo(@0);
     }];
+    
 }
 
 
