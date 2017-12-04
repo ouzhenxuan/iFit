@@ -13,7 +13,7 @@
 #import "FootTableView.h"
 #import "PSDrawerManager.h"
 #import "ChooseFoodTypeView.h"
-#import "ChooseFoodTypeController.h"
+#import "ChooseFoodTypeView.h"
 
 @interface HomeViewController () <UIScrollViewDelegate>
 //view
@@ -80,7 +80,12 @@
     [self.view addSubview:btn];
     btn.layer.cornerRadius = 25;
     btn.clipsToBounds = YES;
-    [btn.titleLabel setText:@"+"];
+//    [btn.titleLabel setText:@"+"];
+    
+    btn.titleLabel.font = [UIFont fontWithName:@"IconFont" size:20];
+    [btn setTitle:@"\U0000e60e" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn.titleLabel setTextColor:[UIColor blackColor]];
     
     __weak typeof(self) weakSelf =self;
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -93,10 +98,9 @@
 }
 
 - (void)btnClick:(UIButton *)btn{
-    ChooseFoodTypeController *vc = [[ChooseFoodTypeController alloc] init];
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+    ChooseFoodTypeView * chooseFoodTypeView = [[ChooseFoodTypeView alloc] initWithFrame:CGRectMake(0, 0, ZXScreenW, ZXScreenH)];
+    [ZXKeyWindow addSubview:chooseFoodTypeView];
+    [chooseFoodTypeView showAnimation];
 }
 
 - (void)setUpButtons{

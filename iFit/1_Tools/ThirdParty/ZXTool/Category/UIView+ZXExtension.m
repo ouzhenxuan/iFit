@@ -143,7 +143,7 @@ static char RedTipViewKey;
     return self.frame.size;
 }
 
-- (void)setZX_size:(CGSize)zx_size
+- (void)setZx_size:(CGSize)zx_size
 {
     CGRect frame = self.frame;
     frame.size = zx_size;
@@ -155,7 +155,7 @@ static char RedTipViewKey;
     return self.frame.size.width;
 }
 
-- (void)setZX_width:(CGFloat)zx_width
+- (void)setZx_width:(CGFloat)zx_width
 {
     CGRect rect = self.frame;
     rect.size.width = zx_width;
@@ -167,7 +167,7 @@ static char RedTipViewKey;
     return self.frame.size.height;
 }
 
-- (void)setZX_height:(CGFloat)zx_height
+- (void)setZx_height:(CGFloat)zx_height
 {
     CGRect rect = self.frame;
     rect.size.height = zx_height;
@@ -179,7 +179,7 @@ static char RedTipViewKey;
     return self.frame.origin.x;
 }
 
-- (void)setZX_x:(CGFloat)zx_x
+- (void)setZx_x:(CGFloat)zx_x
 {
     CGRect rect = self.frame;
     rect.origin.x = zx_x;
@@ -191,7 +191,7 @@ static char RedTipViewKey;
     return self.frame.origin.y;
 }
 
-- (void)setZX_y:(CGFloat)zx_y
+- (void)setZx_y:(CGFloat)zx_y
 {
     CGRect rect = self.frame;
     rect.origin.y = zx_y;
@@ -203,7 +203,7 @@ static char RedTipViewKey;
     return self.center.x;
 }
 
-- (void)setZX_centerX:(CGFloat)zx_centerX
+- (void)setZx_centerX:(CGFloat)zx_centerX
 {
     CGPoint point = self.center;
     point.x = zx_centerX;
@@ -215,7 +215,7 @@ static char RedTipViewKey;
     return self.center.y;
 }
 
-- (void)setZX_centerY:(CGFloat)zx_centerY
+- (void)setZx_centerY:(CGFloat)zx_centerY
 {
     CGPoint point = self.center;
     point.y = zx_centerY;

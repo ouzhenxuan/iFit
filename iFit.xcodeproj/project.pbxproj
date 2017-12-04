@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		BADB8213D0E90B48E6ED0BE9 /* libPods-iFit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE648AF26E6F4696212D5C2E /* libPods-iFit.a */; };
 		F5060BB21F8CA90E006CA345 /* FootTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5060BB11F8CA90E006CA345 /* FootTableView.m */; };
-		F51509FB1FCBB4C500E89B68 /* ChooseFoodTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51509F91FCBB4C500E89B68 /* ChooseFoodTypeController.m */; };
-		F51509FC1FCBB4C500E89B68 /* ChooseFoodTypeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51509FA1FCBB4C500E89B68 /* ChooseFoodTypeController.xib */; };
 		F5150AB81FCC0A2000E89B68 /* NSArray+Log.h in Sources */ = {isa = PBXBuildFile; fileRef = F5150A7D1FCC09C300E89B68 /* NSArray+Log.h */; };
 		F5150AB91FCC0A2000E89B68 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F5150A7E1FCC09C300E89B68 /* NSArray+Log.m */; };
 		F5150ABA1FCC0A2000E89B68 /* NSDate+ZXExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = F5150A7F1FCC09C300E89B68 /* NSDate+ZXExtension.h */; };
@@ -57,6 +55,8 @@
 		F5691E3A1F9F57A000101301 /* PSDrawerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691E361F9F55FF00101301 /* PSDrawerManager.m */; };
 		F5691E3B1F9F57A000101301 /* UIView+leoAdd.h in Sources */ = {isa = PBXBuildFile; fileRef = F5691E371F9F55FF00101301 /* UIView+leoAdd.h */; };
 		F5691E3C1F9F57A000101301 /* UIView+leoAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F5691E381F9F55FF00101301 /* UIView+leoAdd.m */; };
+		F5758A971FD57682004643CF /* ChooseFoodTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5758A961FD57682004643CF /* ChooseFoodTypeView.m */; };
+		F5758A981FD57FA8004643CF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5758A941FD56A1E004643CF /* iconfont.ttf */; };
 		F588A2641F7627FA00BCD61E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2551F7627FA00BCD61E /* HomeViewController.m */; };
 		F588A2651F7627FA00BCD61E /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A2581F7627FA00BCD61E /* CircleView.m */; };
 		F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = F588A25A1F7627FA00BCD61E /* LabelNumView.m */; };
@@ -79,7 +79,6 @@
 		F5D91C381F8DFC9400449981 /* FootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D91C361F8DFC9400449981 /* FootTableViewCell.m */; };
 		F5D91C391F8DFC9400449981 /* FootTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */; };
 		F5D91C3D1F8E031500449981 /* FootCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D91C3C1F8E031500449981 /* FootCategoryModel.m */; };
-		F5E775B21FC576A00029659F /* ChooseFoodTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5E775B11FC576A00029659F /* ChooseFoodTypeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,9 +87,6 @@
 		EE648AF26E6F4696212D5C2E /* libPods-iFit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iFit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5060BB01F8CA90E006CA345 /* FootTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootTableView.h; sourceTree = "<group>"; };
 		F5060BB11F8CA90E006CA345 /* FootTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootTableView.m; sourceTree = "<group>"; };
-		F51509F81FCBB4C500E89B68 /* ChooseFoodTypeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseFoodTypeController.h; sourceTree = "<group>"; };
-		F51509F91FCBB4C500E89B68 /* ChooseFoodTypeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseFoodTypeController.m; sourceTree = "<group>"; };
-		F51509FA1FCBB4C500E89B68 /* ChooseFoodTypeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseFoodTypeController.xib; sourceTree = "<group>"; };
 		F5150A7D1FCC09C300E89B68 /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		F5150A7E1FCC09C300E89B68 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		F5150A7F1FCC09C300E89B68 /* NSDate+ZXExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZXExtension.h"; sourceTree = "<group>"; };
@@ -139,6 +135,8 @@
 		F5691E371F9F55FF00101301 /* UIView+leoAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+leoAdd.h"; sourceTree = "<group>"; };
 		F5691E381F9F55FF00101301 /* UIView+leoAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+leoAdd.m"; sourceTree = "<group>"; };
 		F5758A941FD56A1E004643CF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		F5758A951FD57682004643CF /* ChooseFoodTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseFoodTypeView.h; sourceTree = "<group>"; };
+		F5758A961FD57682004643CF /* ChooseFoodTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseFoodTypeView.m; sourceTree = "<group>"; };
 		F575FE031F62DF1700836131 /* iFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F588A24F1F7627FA00BCD61E /* ZXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXConstants.h; sourceTree = "<group>"; };
 		F588A2541F7627FA00BCD61E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -175,8 +173,6 @@
 		F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootTableViewCell.xib; sourceTree = "<group>"; };
 		F5D91C3B1F8E031500449981 /* FootCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootCategoryModel.h; sourceTree = "<group>"; };
 		F5D91C3C1F8E031500449981 /* FootCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootCategoryModel.m; sourceTree = "<group>"; };
-		F5E775B01FC576A00029659F /* ChooseFoodTypeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseFoodTypeView.h; sourceTree = "<group>"; };
-		F5E775B11FC576A00029659F /* ChooseFoodTypeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseFoodTypeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,9 +299,6 @@
 			children = (
 				F588A2541F7627FA00BCD61E /* HomeViewController.h */,
 				F588A2551F7627FA00BCD61E /* HomeViewController.m */,
-				F51509F81FCBB4C500E89B68 /* ChooseFoodTypeController.h */,
-				F51509F91FCBB4C500E89B68 /* ChooseFoodTypeController.m */,
-				F51509FA1FCBB4C500E89B68 /* ChooseFoodTypeController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -405,6 +398,8 @@
 			isa = PBXGroup;
 			children = (
 				F54FDB221FB9A00600AEAD5F /* LeftView */,
+				F5758A951FD57682004643CF /* ChooseFoodTypeView.h */,
+				F5758A961FD57682004643CF /* ChooseFoodTypeView.m */,
 				F588A2571F7627FA00BCD61E /* CircleView.h */,
 				F588A2581F7627FA00BCD61E /* CircleView.m */,
 				F588A2591F7627FA00BCD61E /* LabelNumView.h */,
@@ -420,8 +415,6 @@
 				F5C71D001F8F1A420035DB72 /* FootHeaderView.h */,
 				F5C71D011F8F1A420035DB72 /* FootHeaderView.m */,
 				F5C71D031F8F1A530035DB72 /* FootHeaderView.xib */,
-				F5E775B01FC576A00029659F /* ChooseFoodTypeView.h */,
-				F5E775B11FC576A00029659F /* ChooseFoodTypeView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -537,6 +530,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5758A981FD57FA8004643CF /* iconfont.ttf in Resources */,
 				F5D91C391F8DFC9400449981 /* FootTableViewCell.xib in Resources */,
 				F588A28F1F762AA900BCD61E /* Info.plist in Resources */,
 				F588A2811F76284A00BCD61E /* LaunchScreen.storyboard in Resources */,
@@ -545,7 +539,6 @@
 				F588A2871F76284A00BCD61E /* icon_info@3x.png in Resources */,
 				F588A2671F7627FA00BCD61E /* LabelNumView.xib in Resources */,
 				F54FDB271FB9A04900AEAD5F /* LeftHeaderView.xib in Resources */,
-				F51509FC1FCBB4C500E89B68 /* ChooseFoodTypeController.xib in Resources */,
 				F5C71D041F8F1A530035DB72 /* FootHeaderView.xib in Resources */,
 				F588A2821F76284A00BCD61E /* Main.storyboard in Resources */,
 				F588A2851F76284A00BCD61E /* icon_back@3x.png in Resources */,
@@ -655,7 +648,6 @@
 				F5691E3C1F9F57A000101301 /* UIView+leoAdd.m in Sources */,
 				F54FDB2D1FBA8FA800AEAD5F /* LeftHomeView.m in Sources */,
 				F588A2841F76284A00BCD61E /* ZXTabBarViewController.m in Sources */,
-				F5E775B21FC576A00029659F /* ChooseFoodTypeView.m in Sources */,
 				F5D91C3D1F8E031500449981 /* FootCategoryModel.m in Sources */,
 				F54FDB2A1FB9A06A00AEAD5F /* LeftHeaderView.m in Sources */,
 				F588A2661F7627FA00BCD61E /* LabelNumView.m in Sources */,
@@ -664,10 +656,10 @@
 				F5C71CFF1F8F0F2A0035DB72 /* FootModel.m in Sources */,
 				F588A2651F7627FA00BCD61E /* CircleView.m in Sources */,
 				F5C71D021F8F1A420035DB72 /* FootHeaderView.m in Sources */,
-				F51509FB1FCBB4C500E89B68 /* ChooseFoodTypeController.m in Sources */,
 				F5060BB21F8CA90E006CA345 /* FootTableView.m in Sources */,
 				F588A2831F76284A00BCD61E /* ZXNavigationController.m in Sources */,
 				F588A2641F7627FA00BCD61E /* HomeViewController.m in Sources */,
+				F5758A971FD57682004643CF /* ChooseFoodTypeView.m in Sources */,
 				F588A2891F76284A00BCD61E /* main.m in Sources */,
 				F588A27F1F76284A00BCD61E /* AppDelegate.m in Sources */,
 			);
