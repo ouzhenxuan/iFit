@@ -5,11 +5,11 @@
 //  Created by Liushannoon on 16/4/20.
 //  Copyright © 2016年 Liushannoon. All rights reserved.
 //
-#define ZX_MINUTE	60
-#define ZX_HOUR		3600
-#define ZX_DAY		86400
-#define ZX_WEEK		604800
-#define ZX_YEAR		31556926
+#define zx_MINUTE	60
+#define zx_HOUR		3600
+#define zx_DAY		86400
+#define zx_WEEK		604800
+#define zx_YEAR		31556926
 
 #import "NSDate+ZXExtension.h"
 
@@ -22,12 +22,12 @@
  *
  *  @return 返回去的是一个2015-11-24 20:57:38格式的的时间字符串
  */
-+ (NSString *)zX_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval
++ (NSString *)zx_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval
 {
-    return [self zX_dateStringWithTimeIntervalSince1970:timeInterval withDateFormatType:ZXDateForMatTypeyyyyMMddHHmmss];
+    return [self zx_dateStringWithTimeIntervalSince1970:timeInterval withDateFormatType:ZXDateForMatTypeyyyyMMddHHmmss];
 }
 
-+ (NSDateFormatter *)zX_getDateFormatterWithDateFormatType:(ZXDateForMatType)dateFormatType
++ (NSDateFormatter *)zx_getDateFormatterWithDateFormatType:(ZXDateForMatType)dateFormatType
 {
     // 日期格式化类
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -85,9 +85,9 @@
  *
  *  @return 返回去的是一个指定时间格式的的时间字符串
  */
-+ (NSString *)zX_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval withDateFormatType:(ZXDateForMatType )dateFormatType
++ (NSString *)zx_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval withDateFormatType:(ZXDateForMatType )dateFormatType
 {
-    NSDateFormatter *dateFormatter = [self zX_getDateFormatterWithDateFormatType:dateFormatType];
+    NSDateFormatter *dateFormatter = [self zx_getDateFormatterWithDateFormatType:dateFormatType];
     // 帖子的创建时间
     NSDate *create = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     // 日期字符串
@@ -102,9 +102,9 @@
  *
  *  @return 时间戳
  */
-+ (NSTimeInterval)zX_timeIntervalWithDateString:(NSString *)dateString;
++ (NSTimeInterval)zx_timeIntervalWithDateString:(NSString *)dateString;
 {
-    return [self zX_timeIntervalWithDateString:dateString withDateFormatType:ZXDateForMatTypeyyyyMMddHHmmss];
+    return [self zx_timeIntervalWithDateString:dateString withDateFormatType:ZXDateForMatTypeyyyyMMddHHmmss];
 }
 
 /**
@@ -115,9 +115,9 @@
  *
  *  @return 转化后的时间戳
  */
-+ (NSTimeInterval)zX_timeIntervalWithDateString:(NSString *)dateString withDateFormatType:(ZXDateForMatType)dateFormatType
++ (NSTimeInterval)zx_timeIntervalWithDateString:(NSString *)dateString withDateFormatType:(ZXDateForMatType)dateFormatType
 {
-    NSDateFormatter *dateFormatter = [self zX_getDateFormatterWithDateFormatType:dateFormatType];
+    NSDateFormatter *dateFormatter = [self zx_getDateFormatterWithDateFormatType:dateFormatType];
     NSDate *date = [dateFormatter dateFromString:dateString];
     return [date timeIntervalSince1970];
 }
@@ -125,7 +125,7 @@
 /**
  *  计算from到今天的时间差距，返回值是NSDateComponents，可以直接取出各种时间成员
  */
-- (NSDateComponents *)zX_deltaFrom:(NSDate *)from
+- (NSDateComponents *)zx_deltaFrom:(NSDate *)from
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
@@ -137,7 +137,7 @@
 /**
  *  判断是否是今年
  */
-- (BOOL)zX_isThisYear
+- (BOOL)zx_isThisYear
 {
     // 日历
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -150,7 +150,7 @@
 /**
  *  判断是否是今天
  */
-- (BOOL)zX_isToday
+- (BOOL)zx_isToday
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd";
@@ -163,7 +163,7 @@
 /**
  *  判断是否是昨天
  */
-- (BOOL)zX_isYesterday
+- (BOOL)zx_isYesterday
 {
     // 2014-12-31 23:59:59 -> 2014-12-31
     // 2015-01-01 00:00:01 -> 2015-01-01
@@ -184,7 +184,7 @@
 /**
  * 返回一个指定年月日的date对象
  */
-+ (NSDate *)zX_dateWithDay:(NSUInteger)day month:(NSUInteger)month year:(NSUInteger)year
++ (NSDate *)zx_dateWithDay:(NSUInteger)day month:(NSUInteger)month year:(NSUInteger)year
 {
     //  先定义一个遵循某个历法的日历对象
     //    NSCalendar *greCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -204,7 +204,7 @@
 /**
  *  快速创建NSDate对象
  */
-+ (NSDate *)zX_dateWithYear:(NSUInteger)year
++ (NSDate *)zx_dateWithYear:(NSUInteger)year
                       Month:(NSUInteger)month
                         Day:(NSUInteger)day
                        Hour:(NSUInteger)hour
@@ -225,10 +225,10 @@
 /**
  *  获取当天的年月日时间,时分秒为0
  */
-+ (NSDate *)zX_currentDayDateOnlyYMD
++ (NSDate *)zx_currentDayDateOnlyYMD
 {
     NSDate *tempDate = [NSDate date];
-    tempDate = [self zX_dateWithYear:tempDate.zX_year Month:tempDate.zX_month Day:tempDate.zX_day Hour:0 Minute:0 Second:0];
+    tempDate = [self zx_dateWithYear:tempDate.zx_year Month:tempDate.zx_month Day:tempDate.zx_day Hour:0 Minute:0 Second:0];
     return tempDate;
 }
 
@@ -243,7 +243,7 @@
 /**
  *  获得对应的年份
  */
-- (NSUInteger)zX_year
+- (NSUInteger)zx_year
 {
     return [self componentsOfDay].year;
 }
@@ -251,7 +251,7 @@
 /**
  *  获得NSDate对应的月份
  */
-- (NSUInteger)zX_month
+- (NSUInteger)zx_month
 {
     return [self componentsOfDay].month;
 }
@@ -259,10 +259,10 @@
 /**
  *  返回NSDate对应的月份,字符串格式的月份
  */
-- (NSString *)zX_monthString
+- (NSString *)zx_monthString
 {
     NSString *monthString = nil;
-    NSUInteger month = [self zX_month];
+    NSUInteger month = [self zx_month];
     switch (month) {
         case 1:
             monthString = @"一月";
@@ -306,37 +306,37 @@
     return monthString;
 }
 
-- (NSUInteger)zX_day
+- (NSUInteger)zx_day
 {
     return [self componentsOfDay].day;
 }
 
-- (NSUInteger)zX_hour
+- (NSUInteger)zx_hour
 {
     return [self componentsOfDay].hour;
 }
 
-- (NSUInteger)zX_minute
+- (NSUInteger)zx_minute
 {
     return [self componentsOfDay].minute;
 }
 
-- (NSUInteger)zX_second
+- (NSUInteger)zx_second
 {
     return [self componentsOfDay].second;
 }
 
-- (NSUInteger)zX_weekday
+- (NSUInteger)zx_weekday
 {
     return [self componentsOfDay].weekday;
 }
 
-- (NSUInteger)zX_weekOfDayInYear
+- (NSUInteger)zx_weekOfDayInYear
 {
     return [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitWeekOfYear inUnit:NSCalendarUnitYear forDate:self];
 }
 
-- (NSDate *)zX_workBeginTime
+- (NSDate *)zx_workBeginTime
 {
     unsigned int flags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *components = [[NSCalendar currentCalendar] components:flags fromDate:self];
@@ -347,7 +347,7 @@
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
 
-- (NSDate *)zX_workEndTime
+- (NSDate *)zx_workEndTime
 {
     unsigned int flags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *components = [[NSCalendar currentCalendar] components:flags fromDate:self];
@@ -358,7 +358,7 @@
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
 
-- (NSDate *)zX_oneHourLater
+- (NSDate *)zx_oneHourLater
 {
     return [NSDate dateWithTimeInterval:3600 sinceDate:self];
 }
@@ -366,13 +366,13 @@
 /**
  *  获得某一天的这个时刻
  */
-- (NSDate *)zX_sameTimeOfDate
+- (NSDate *)zx_sameTimeOfDate
 {
     unsigned int flags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *components = [[NSCalendar currentCalendar] components:flags fromDate:self];
-    [components setHour:[[NSDate date] zX_hour]];
-    [components setMinute:[[NSDate date] zX_minute]];
-    [components setSecond:[[NSDate date] zX_second]];
+    [components setHour:[[NSDate date] zx_hour]];
+    [components setMinute:[[NSDate date] zx_minute]];
+    [components setSecond:[[NSDate date] zx_second]];
     
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
@@ -384,9 +384,9 @@
  *
  *  @return 返回结果,yes表示同一天
  */
-- (BOOL)zX_sameDayWithDate:(NSDate *)otherDate
+- (BOOL)zx_sameDayWithDate:(NSDate *)otherDate
 {
-    if (self.zX_year == otherDate.zX_year && self.zX_month == otherDate.zX_month && self.zX_day == otherDate.zX_day) {
+    if (self.zx_year == otherDate.zx_year && self.zx_month == otherDate.zx_month && self.zx_day == otherDate.zx_day) {
         return YES;
     } else {
         return NO;
@@ -400,9 +400,9 @@
  *
  *  @return 返回结果,yes表示同一
  */
-- (BOOL)zX_sameWeekWithDate:(NSDate *)otherDate
+- (BOOL)zx_sameWeekWithDate:(NSDate *)otherDate
 {
-    if (self.zX_year == otherDate.zX_year  && self.zX_month == otherDate.zX_month && self.zX_weekOfDayInYear == otherDate.zX_weekOfDayInYear) {
+    if (self.zx_year == otherDate.zx_year  && self.zx_month == otherDate.zx_month && self.zx_weekOfDayInYear == otherDate.zx_weekOfDayInYear) {
         return YES;
     } else {
         return NO;
@@ -416,9 +416,9 @@
  *
  *  @return 返回结果,yes表示同一
  */
-- (BOOL)zX_sameMonthWithDate:(NSDate *)otherDate
+- (BOOL)zx_sameMonthWithDate:(NSDate *)otherDate
 {
-    if (self.zX_year == otherDate.zX_year && self.zX_month == otherDate.zX_month) {
+    if (self.zx_year == otherDate.zx_year && self.zx_month == otherDate.zx_month) {
         return YES;
     } else {
         return NO;
@@ -430,7 +430,7 @@
 /**
  *  NSDate对象所在的月有几天
  */
-- (NSUInteger)zX_numberOfDaysInCurrentMonth
+- (NSUInteger)zx_numberOfDaysInCurrentMonth
 {
     return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self].length;
 }
@@ -438,11 +438,11 @@
 /**
  *  NSDate对象所在的这个月有几个星期
  */
-- (NSUInteger)zX_numberOfWeeksInCurrentMonth
+- (NSUInteger)zx_numberOfWeeksInCurrentMonth
 {
-    NSUInteger weekday = [[self zX_firstDayOfCurrentMonth] zX_weeklyOrdinality];
+    NSUInteger weekday = [[self zx_firstDayOfCurrentMonth] zx_weeklyOrdinality];
     
-    NSUInteger days = [self zX_numberOfDaysInCurrentMonth];
+    NSUInteger days = [self zx_numberOfDaysInCurrentMonth];
     NSUInteger weeks = 0;
     
     if (weekday > 1) {
@@ -458,7 +458,7 @@
 /**
  *  NSDate对象,在星期中的顺序,星期几
  */
-- (NSUInteger)zX_weeklyOrdinality
+- (NSUInteger)zx_weeklyOrdinality
 {
     return [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitWeekOfMonth forDate:self];
 }
@@ -466,7 +466,7 @@
 /**
  *  NSDate对象在月份中的第几天
  */
-- (NSUInteger)zX_monthlyOrdinality
+- (NSUInteger)zx_monthlyOrdinality
 {
     return [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self];
 }
@@ -474,7 +474,7 @@
 /**
  *  NSDate对象所在的月的第一天
  */
-- (NSDate *)zX_firstDayOfCurrentMonth
+- (NSDate *)zx_firstDayOfCurrentMonth
 {
     // 开始时间
     NSDate *startDate = nil;
@@ -486,18 +486,18 @@
 /**
  *  NSDate对象所在的月的最后一天
  */
-- (NSDate *)zX_lastDayOfCurrentMonth
+- (NSDate *)zx_lastDayOfCurrentMonth
 {
     NSCalendarUnit calendarUnit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:calendarUnit fromDate:self];
-    dateComponents.day = [self zX_numberOfDaysInCurrentMonth];
+    dateComponents.day = [self zx_numberOfDaysInCurrentMonth];
     return [[NSCalendar currentCalendar] dateFromComponents:dateComponents];
 }
 
 /**
  *  NSDate对象在上个月中的NSDate对象 3.28 -> 2.28
  */
-- (NSDate *)zX_dayInThePreviousMonth
+- (NSDate *)zx_dayInThePreviousMonth
 {
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     dateComponents.month = -1;
@@ -507,7 +507,7 @@
 /**
  *  NSDate对象在下个月中的NSDate对象 , 3.28 -> 4.28
  */
-- (NSDate *)zX_dayInTheFollowingMonth
+- (NSDate *)zx_dayInTheFollowingMonth
 {
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
     dateComponents.month = 1;
@@ -517,7 +517,7 @@
 /**
  *  根据sele,生成一个NSDateComponents对象
  */
-- (NSDateComponents *)zX_YMDComponents
+- (NSDateComponents *)zx_YMDComponents
 {
     return [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
 }
@@ -525,14 +525,14 @@
 /**
  * NSDate对象所在的星期在这个月中,是第几个星期
  */
-- (NSUInteger)zX_weekNumberInCurrentMonth
+- (NSUInteger)zx_weekNumberInCurrentMonth
 {
-    NSUInteger firstDay = [[self zX_firstDayOfCurrentMonth] zX_weeklyOrdinality];
-    NSUInteger weeksCount = [self zX_numberOfWeeksInCurrentMonth];
+    NSUInteger firstDay = [[self zx_firstDayOfCurrentMonth] zx_weeklyOrdinality];
+    NSUInteger weeksCount = [self zx_numberOfWeeksInCurrentMonth];
     NSUInteger weekNumber = 0;
     
-    NSDateComponents *c = [self zX_YMDComponents];
-    NSUInteger startIndex = [[self zX_firstDayOfCurrentMonth] zX_monthlyOrdinality];
+    NSDateComponents *c = [self zx_YMDComponents];
+    NSUInteger startIndex = [[self zx_firstDayOfCurrentMonth] zx_monthlyOrdinality];
     NSUInteger endIndex = startIndex + (7 - firstDay);
     for (int i = 0; i < weeksCount; ++i) {
         if (c.day >= startIndex && c.day <= endIndex) {
@@ -552,7 +552,7 @@
  *
  *  @return 加了days天以后的NSDate对象
  */
-- (NSDate *)zX_dateByAddingDays:(NSInteger)days
+- (NSDate *)zx_dateByAddingDays:(NSInteger)days
 {
     NSDateComponents *components = [[NSDateComponents alloc] init];
     components.day = days;
@@ -566,7 +566,7 @@
  *
  *  @return 操作后的对象
  */
-- (NSDate *)zX_dateByAddingMonths:(NSInteger)months
+- (NSDate *)zx_dateByAddingMonths:(NSInteger)months
 {
     NSDateComponents *components = [[NSDateComponents alloc] init];
     components.month = months;
@@ -580,9 +580,9 @@
  *
  *  @return
  */
-- (NSDate *)zX_dateByAddingMinutes:(NSInteger)minutes
+- (NSDate *)zx_dateByAddingMinutes:(NSInteger)minutes
 {
-    NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + ZX_MINUTE * minutes;
+    NSTimeInterval aTimeInterval = [self timeIntervalSinceReferenceDate] + zx_MINUTE * minutes;
     NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
     return newDate;
 }
@@ -594,11 +594,11 @@
  *
  *  @return 返回去的是一个指定时间格式的的时间字符串
  */
-- (NSString *)zX_dateStringWithDateFormatType:(ZXDateForMatType)dateFormatType
+- (NSString *)zx_dateStringWithDateFormatType:(ZXDateForMatType)dateFormatType
 {
     NSInteger timeInterval = [self timeIntervalSince1970];
     // 日期格式化类
-    NSDateFormatter *dateFormatter = [NSDate zX_getDateFormatterWithDateFormatType:dateFormatType];
+    NSDateFormatter *dateFormatter = [NSDate zx_getDateFormatterWithDateFormatType:dateFormatType];
     // 帖子的创建时间
     NSDate *create = [NSDate dateWithTimeIntervalSince1970:timeInterval];
     // 日期字符串
@@ -614,9 +614,9 @@
  *
  *  @return 转化后的时间戳
  */
-+ (NSTimeInterval)zX_timeIntervalWithDateString:(NSString *)dateString withDateFormat:(ZXDateForMatType)dateFormatType
++ (NSTimeInterval)zx_timeIntervalWithDateString:(NSString *)dateString withDateFormat:(ZXDateForMatType)dateFormatType
 {
-    NSDateFormatter *dateFormatter = [self zX_getDateFormatterWithDateFormatType:dateFormatType];
+    NSDateFormatter *dateFormatter = [self zx_getDateFormatterWithDateFormatType:dateFormatType];
     NSDate *date = [dateFormatter dateFromString:dateString];
     return [date timeIntervalSince1970];
 }
@@ -629,9 +629,9 @@
  
  @return 对应的时分秒字符串 eg:  100s   ->  @"00:01:40"
  */
-+ (NSString *)zX_HMSStringWithSecond:(NSInteger)second
++ (NSString *)zx_HMSStringWithSecond:(NSInteger)second
 {
-    return [self zX_HMSStringWithSecond:second HMSType:ZXHMSStringTypehhmmss];
+    return [self zx_HMSStringWithSecond:second HMSType:ZXHMSStringTypehhmmss];
 }
 
 /**
@@ -641,7 +641,7 @@
  
  @return 对应的时分秒字符串 eg:  100s   ->  @"00:01:40"
  */
-+ (NSString *)zX_HMSStringWithSecond:(NSInteger)second HMSType:(ZXHMSStringType)HMSType
++ (NSString *)zx_HMSStringWithSecond:(NSInteger)second HMSType:(ZXHMSStringType)HMSType
 {
     switch (HMSType) {
         case ZXHMSStringTypehhmmss:

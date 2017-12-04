@@ -5,7 +5,7 @@
 //  Created by 区振轩 on 2017/11/27.
 //  Copyright © 2017年 区振轩. All rights reserved.
 //
-#define kOffsetY ((ScreenBoundsHeight - 275) * 0.5)
+#define kOffsetY ((ScreenBoundsHeight - 275))
 #define columns  3;
 
 #import "ChooseFoodTypeController.h"
@@ -37,13 +37,20 @@
     _waterBtn = [[UIButton alloc] init];
     _buttons = @[_breakfastBtn,_lunchBtn,_dinnerBtn,_snackBtn,_waterBtn];
     
+    _cancelButton = [[UIButton alloc] init];
+    [self.view addSubview:_cancelButton];
+    
     [self setBtnUI];
     [self setBtnFrame];
     for (UIButton * btn  in _buttons) {
         [self.view addSubview:btn];
-        
     }
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self showAnimation];
 }
 
 - (void) setBtnUI{
@@ -53,12 +60,15 @@
     [_snackBtn setImage:[UIImage imageNamed:@"snack"] forState:UIControlStateNormal];
     [_waterBtn setImage:[UIImage imageNamed:@"sport"] forState:UIControlStateNormal];
     
-//    _breakfastBtn.imageView.image = [UIImage imageNamed:@"breakfast"];
-//    _lunchBtn.imageView.image = [UIImage imageNamed:@"lunch"];
-//    _dinnerBtn.imageView.image = [UIImage imageNamed:@"dinner"];
-//    _snackBtn.imageView.image = [UIImage imageNamed:@"snack"];
-//    _waterBtn.imageView.image = [UIImage imageNamed:@"water"];
-    
+    [_cancelButton setImage:[UIImage imageNamed:@"icon_close"] forState:UIControlStateNormal];
+    _cancelButton.backgroundColor = [UIColor redColor];
+    __weak typeof(self) weakSelf =self;
+    [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(@30);
+        make.width.mas_equalTo(@30);
+        make.centerX.equalTo(weakSelf.view);
+        make.bottom.equalTo(weakSelf.view).with.mas_offset(@-30);
+    }];
 }
 
 - (void) setBtnFrame{
@@ -74,9 +84,8 @@
         UIButton *tempButton = self.buttons[i];
         row = i / columns;
         column = i % columns;
-        tempButton.frame = CGRectMake(leftMargin + (buttonWidth + landscapeInsetMargin) * column, top + row * (buttonHeight + portraitInsetMargin)  + 0, buttonWidth, buttonHeight);
+        tempButton.frame = CGRectMake(leftMargin + (buttonWidth + landscapeInsetMargin) * column, top + row * (buttonHeight + portraitInsetMargin)  + kOffsetY, buttonWidth, buttonHeight);
     }
-//    kOffsetY
 }
 
 - (void)showAnimation
@@ -93,7 +102,7 @@
                 [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:20 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                     self.cancelButton.zx_y = ZXScreenH - self.cancelButton.zx_height - 37;
                 } completion:^(BOOL finished) {
-                    
+
                 }];
             }
         }];

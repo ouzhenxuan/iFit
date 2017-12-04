@@ -67,7 +67,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 返回去的是一个2015-11-24 20:57:38格式的的时间字符串
  */
-+ (NSString *)ZX_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval;
++ (NSString *)zx_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval;
 /**
  *  传一个时间戳过来,返回一个指定格式的时间字符串
  *
@@ -76,7 +76,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 返回去的是一个指定时间格式的的时间字符串
  */
-+ (NSString *)zX_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval withDateFormatType:(ZXDateForMatType )dateFormatType;
++ (NSString *)zx_dateStringWithTimeIntervalSince1970:(NSInteger)timeInterval withDateFormatType:(ZXDateForMatType )dateFormatType;
 
 /**
  *  传一个已经格式化的日期字符串,转化为yyyy-MM-dd HH:mm:ss格式的NSDate,然后再转成时间戳
@@ -85,7 +85,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 时间戳
  */
-+ (NSTimeInterval)zX_timeIntervalWithDateString:(NSString *)dateString;
++ (NSTimeInterval)zx_timeIntervalWithDateString:(NSString *)dateString;
 /**
  *  传一个已经格式化的日期字符串,转化为yyyy-MM-dd HH:mm:ss格式的NSDate,然后再转成时间戳
  *
@@ -94,32 +94,32 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 转化后的时间戳
  */
-+ (NSTimeInterval)zX_timeIntervalWithDateString:(NSString *)dateString withDateFormatType:(ZXDateForMatType)dateFormatType;
++ (NSTimeInterval)zx_timeIntervalWithDateString:(NSString *)dateString withDateFormatType:(ZXDateForMatType)dateFormatType;
 
 /**
  *  计算from到今天的时间差距，返回值是NSDateComponents，可以直接取出各种时间成员
  */
-- (NSDateComponents *)zX_deltaFrom:(NSDate *)from;
+- (NSDateComponents *)zx_deltaFrom:(NSDate *)from;
 /**
  *  判断是否是今年
  */
-- (BOOL)zX_isThisYear;
+- (BOOL)zx_isThisYear;
 /**
  *  判断是否是今天
  */
-- (BOOL)zX_isToday;
+- (BOOL)zx_isToday;
 /**
  *  判断是否是昨天
  */
-- (BOOL)zX_isYesterday;
+- (BOOL)zx_isYesterday;
 /**
  * 返回一个指定年月日的date对象
  */
-+ (NSDate *)zX_dateWithDay:(NSUInteger)day month:(NSUInteger)month year:(NSUInteger)year;
++ (NSDate *)zx_dateWithDay:(NSUInteger)day month:(NSUInteger)month year:(NSUInteger)year;
 /**
  *  快速创建NSDate对象
  */
-+ (NSDate *)zX_dateWithYear:(NSUInteger)year
++ (NSDate *)zx_dateWithYear:(NSUInteger)year
                       Month:(NSUInteger)month
                         Day:(NSUInteger)day
                        Hour:(NSUInteger)hour
@@ -128,7 +128,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
 /**
  *  获取当天的年月日时间,时分秒为0
  */
-+ (NSDate *)zX_currentDayDateOnlyYMD;
++ (NSDate *)zx_currentDayDateOnlyYMD;
 /**
  *  把NSDate对象转化成一个包括“年”，“月”，“日”，“周”，“时”，“分”，“秒”的NSDateComponents对象
  */
@@ -136,55 +136,55 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
 /**
  *  获得NSDate对象中对应的年份
  */
-- (NSUInteger)zX_year;
+- (NSUInteger)zx_year;
 /**
  *  获得NSDate对象中对应的月份
  */
-- (NSUInteger)zX_month;
+- (NSUInteger)zx_month;
 /**
  *  返回NSDate对象中对应的月份,字符串格式的月份
  */
-- (NSString *)zX_monthString;
+- (NSString *)zx_monthString;
 /**
  *  获取NSDate对象中对应的天
  */
-- (NSUInteger)zX_day;
+- (NSUInteger)zx_day;
 /**
  *  获取NSDate对象中对应的小时
  */
-- (NSUInteger)zX_hour;
+- (NSUInteger)zx_hour;
 /**
  *  获得NSDate对应的分钟数
  */
-- (NSUInteger)zX_minute;
+- (NSUInteger)zx_minute;
 /**
  *  获得NSDate对应的秒数
  */
-- (NSUInteger)zX_second;
+- (NSUInteger)zx_second;
 /**
  *  获得NSDate对应的星期
  */
-- (NSUInteger)zX_weekday;
+- (NSUInteger)zx_weekday;
 /**
  *  获取当天是当年的第几周
  */
-- (NSUInteger)zX_weekOfDayInYear;
+- (NSUInteger)zx_weekOfDayInYear;
 /**
  *  获得一般当天的工作开始时间
  */
-- (NSDate *)zX_workBeginTime;
+- (NSDate *)zx_workBeginTime;
 /**
  *  获得一般当天的工作结束时间
  */
-- (NSDate *)zX_workEndTime;
+- (NSDate *)zx_workEndTime;
 /**
  *  获取一小时后的时间
  */
-- (NSDate *)zX_oneHourLater;
+- (NSDate *)zx_oneHourLater;
 /**
  *  获得某一天的这个时刻
  */
-- (NSDate *)zX_sameTimeOfDate;
+- (NSDate *)zx_sameTimeOfDate;
 /**
  *  创第一个时间过来,判断和调用这个方法的时间是否是同一个天
  *
@@ -192,7 +192,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 返回结果,yes表示同一
  */
-- (BOOL)zX_sameDayWithDate:(NSDate *)otherDate;
+- (BOOL)zx_sameDayWithDate:(NSDate *)otherDate;
 /**
  *  创第一个时间过来,判断和调用这个方法的时间是否是同一个周
  *
@@ -200,7 +200,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 返回结果,yes表示同一
  */
-- (BOOL)zX_sameWeekWithDate:(NSDate *)otherDate;
+- (BOOL)zx_sameWeekWithDate:(NSDate *)otherDate;
 /**
  *  创第一个时间过来,判断和调用这个方法的时间是否是同一个月
  *
@@ -208,50 +208,50 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 返回结果,yes表示同一
  */
-- (BOOL)zX_sameMonthWithDate:(NSDate *)otherDate;
+- (BOOL)zx_sameMonthWithDate:(NSDate *)otherDate;
 
 /************************        日历相关的方法         *****************************/
 
 /**
  *  NSDate对象所在的月有几天
  */
-- (NSUInteger)zX_numberOfDaysInCurrentMonth;
+- (NSUInteger)zx_numberOfDaysInCurrentMonth;
 /**
  *  NSDate对象所在的这个月有几个星期
  */
-- (NSUInteger)zX_numberOfWeeksInCurrentMonth;
+- (NSUInteger)zx_numberOfWeeksInCurrentMonth;
 /**
  *  NSDate对象,在星期中的顺序,星期几
  */
-- (NSUInteger)zX_weeklyOrdinality;
+- (NSUInteger)zx_weeklyOrdinality;
 /**
  *  NSDate对象在月份中的第几天
  */
-- (NSUInteger)zX_monthlyOrdinality;
+- (NSUInteger)zx_monthlyOrdinality;
 /**
  *  NSDate对象所在的月的第一天
  */
-- (NSDate *)zX_firstDayOfCurrentMonth;
+- (NSDate *)zx_firstDayOfCurrentMonth;
 /**
  *  NSDate对象所在的月的最后一天
  */
-- (NSDate *)zX_lastDayOfCurrentMonth;
+- (NSDate *)zx_lastDayOfCurrentMonth;
 /**
  *  NSDate对象在上个月中的NSDate对象 3.28 -> 2.28
  */
-- (NSDate *)zX_dayInThePreviousMonth;
+- (NSDate *)zx_dayInThePreviousMonth;
 /**
  *  NSDate对象在下个月中的NSDate对象 , 3.28 -> 4.28
  */
-- (NSDate *)zX_dayInTheFollowingMonth;
+- (NSDate *)zx_dayInTheFollowingMonth;
 /**
  *  根据sele,生成一个NSDateComponents对象
  */
-- (NSDateComponents *)zX_YMDComponents;
+- (NSDateComponents *)zx_YMDComponents;
 /**
  * NSDate对象所在的星期在这个月中,是第几个星期
  */
-- (NSUInteger)zX_weekNumberInCurrentMonth;
+- (NSUInteger)zx_weekNumberInCurrentMonth;
 /**
  *  计算当前NSDate对象加上传递过来的days天以后的NSDate值,
  *
@@ -259,7 +259,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 加了days天以后的NSDate对象
  */
-- (NSDate *)zX_dateByAddingDays:(NSInteger)days;
+- (NSDate *)zx_dateByAddingDays:(NSInteger)days;
 /**
  *  计算当前NSDate对象加上传递过来的months个月以后的NSDate
  *
@@ -267,7 +267,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 操作后的对象
  */
-- (NSDate *)zX_dateByAddingMonths:(NSInteger)months;
+- (NSDate *)zx_dateByAddingMonths:(NSInteger)months;
 /**
  * 计算当前NSDate对象加上传递过来的minutes个分以后的NSDate
  *
@@ -275,7 +275,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return
  */
-- (NSDate *)zX_dateByAddingMinutes:(NSInteger)minutes;
+- (NSDate *)zx_dateByAddingMinutes:(NSInteger)minutes;
 /**
  *  对NSDate对象进行指定格式的转换,返回一个指定格式的日期时间字符串
  *
@@ -283,7 +283,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 返回去的是一个指定时间格式的的时间字符串
  */
-- (NSString *)zX_dateStringWithDateFormatType:(ZXDateForMatType)dateFormatType;
+- (NSString *)zx_dateStringWithDateFormatType:(ZXDateForMatType)dateFormatType;
 /**
  *  把传过来的字符串日期,转化为指定格式的nsdate,然后再转成时间戳
  *
@@ -292,7 +292,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  *
  *  @return 转化后的时间戳
  */
-+ (NSTimeInterval)zX_timeIntervalWithDateString:(NSString *)dateString withDateFormat:(ZXDateForMatType)dateFormatType;
++ (NSTimeInterval)zx_timeIntervalWithDateString:(NSString *)dateString withDateFormat:(ZXDateForMatType)dateFormatType;
 /**
  把一个表示秒的整数 , 转化成对应的时分秒格式字符串
  
@@ -300,7 +300,7 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  
  @return 对应的时分秒字符串 eg:  100s   ->  @"00:01:40"
  */
-+ (NSString *)zX_HMSStringWithSecond:(NSInteger)second;
++ (NSString *)zx_HMSStringWithSecond:(NSInteger)second;
 /**
  把一个表示秒的整数 , 转化成对应的时分秒格式字符串
  
@@ -308,6 +308,6 @@ typedef NS_ENUM(NSUInteger, ZXHMSStringType){
  
  @return 对应的时分秒字符串 eg:  100s   ->  @"00:01:40"
  */
-+ (NSString *)zX_HMSStringWithSecond:(NSInteger)second HMSType:(ZXHMSStringType)HMSType;
++ (NSString *)zx_HMSStringWithSecond:(NSInteger)second HMSType:(ZXHMSStringType)HMSType;
 
 @end

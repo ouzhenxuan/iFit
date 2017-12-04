@@ -8,7 +8,8 @@
 
 #import "HomeViewController.h"
 #import "PreviewView.h"
-#import "UIColor+HexColor.h"
+//#import "UIColor+HexColor.h"
+#import "UIColor+ZXExtension.h"
 #import "FootTableView.h"
 #import "PSDrawerManager.h"
 #import "ChooseFoodTypeView.h"
@@ -112,7 +113,8 @@
     [_scrollView setScrollEnabled:YES];
     
     _grayView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenBoundsWidth, 1080)];
-    _grayView.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
+    _grayView.backgroundColor = [UIColor zx_colorWithHexString:@"EEEEEE"];
+//    [UIColor colorWithHexString:@"#EEEEEE"];
     
     // 隐藏水平滚动条
     _scrollView.showsHorizontalScrollIndicator = NO;
