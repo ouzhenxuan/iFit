@@ -23,7 +23,7 @@
 @property (nonatomic,strong) PreviewView * preview;
 @property (nonatomic,strong) FootTableView * footTableView;
 
-
+@property (nonatomic,strong) UIButton * addBtn;
 
 
 //feild
@@ -55,7 +55,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
+
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -75,26 +75,25 @@
 }
 
 - (void)setUpTheAddBtn{
-    UIButton * btn = [[UIButton alloc] init];
-    btn.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:btn];
-    btn.layer.cornerRadius = 25;
-    btn.clipsToBounds = YES;
-//    [btn.titleLabel setText:@"+"];
+    _addBtn = [[UIButton alloc] init];
+    _addBtn.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:_addBtn];
+    _addBtn.layer.cornerRadius = 25;
+    _addBtn.clipsToBounds = YES;
     
-    btn.titleLabel.font = [UIFont fontWithName:@"IconFont" size:20];
-    [btn setTitle:@"\U0000e60e" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn.titleLabel setTextColor:[UIColor blackColor]];
+    _addBtn.titleLabel.font = [UIFont fontWithName:@"IconFont" size:20];
+    [_addBtn setTitle:@"\U0000e60e" forState:UIControlStateNormal];
+    [_addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     __weak typeof(self) weakSelf =self;
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_addBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(weakSelf.view).with.mas_offset(@-20);
         make.height.mas_equalTo(@50);
         make.width.mas_equalTo(@50);
         make.centerX.equalTo(weakSelf.view);
     }];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    _addBtn.transform = CGAffineTransformMakeRotation(M_PI_4);
+    [_addBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)btnClick:(UIButton *)btn{

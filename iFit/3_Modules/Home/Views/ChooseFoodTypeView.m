@@ -40,10 +40,6 @@
         _snackBtn = [[UIButton alloc] init];
         _waterBtn = [[UIButton alloc] init];
         _buttons = @[_breakfastBtn,_lunchBtn,_dinnerBtn,_snackBtn,_waterBtn];
-        
-//        _cancelButton = [[UIButton alloc] init];
-//        [_cancelButton addTarget:self action:@selector(cancelBtnClickEvent:) forControlEvents:UIControlEventTouchUpInside];
-//        [self addSubview:_cancelButton];
 
         [self setTheCancelBtn];
         
@@ -60,31 +56,25 @@
 }
 
 - (void) setTheCancelBtn{
-    UIButton * btn = [[UIButton alloc] init];
-    btn.backgroundColor = [UIColor yellowColor];
-    [self addSubview:btn];
-    btn.layer.cornerRadius = 25;
-    btn.clipsToBounds = YES;
+    _cancelButton = [[UIButton alloc] init];
+    _cancelButton.backgroundColor = [UIColor yellowColor];
+    [self addSubview:_cancelButton];
+    _cancelButton.layer.cornerRadius = 25;
+    _cancelButton.clipsToBounds = YES;
     
-    btn.titleLabel.font = [UIFont fontWithName:@"IconFont" size:20];
-    [btn setTitle:@"\U0000e637" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn.titleLabel setTextColor:[UIColor blackColor]];
-    
+    _cancelButton.titleLabel.font = [UIFont fontWithName:@"IconFont" size:20];
+    [_cancelButton setTitle:@"\U0000e60e" forState:UIControlStateNormal];
+    [_cancelButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [_cancelButton.titleLabel setTextColor:[UIColor blackColor]];
+    _cancelButton.transform = CGAffineTransformMakeRotation(M_PI_4);
     __weak typeof(self) weakSelf =self;
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(weakSelf).with.mas_offset(@-20);
         make.height.mas_equalTo(@50);
         make.width.mas_equalTo(@50);
         make.centerX.equalTo(weakSelf);
     }];
-    [btn addTarget:self action:@selector(cancelBtnClickEvent:) forControlEvents:UIControlEventTouchUpInside];
-    UILabel * lab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 30)];
-    [btn addSubview:lab];
-    lab.font = [UIFont fontWithName:@"iconfont" size:15];//设置label的字体
-    lab.text = @"\U0000e6d9";
-    [lab setTextColor:[UIColor blackColor]];
-    
+    [_cancelButton addTarget:self action:@selector(cancelBtnClickEvent:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void) setBtnUI{
@@ -93,16 +83,6 @@
     [_dinnerBtn setImage:[UIImage imageNamed:@"dinner"] forState:UIControlStateNormal];
     [_snackBtn setImage:[UIImage imageNamed:@"snack"] forState:UIControlStateNormal];
     [_waterBtn setImage:[UIImage imageNamed:@"sport"] forState:UIControlStateNormal];
-    
-    [_cancelButton setImage:[UIImage imageNamed:@"icon_close"] forState:UIControlStateNormal];
-    _cancelButton.backgroundColor = [UIColor redColor];
-    __weak typeof(self) weakSelf =self;
-    [_cancelButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(@30);
-        make.width.mas_equalTo(@30);
-        make.centerX.equalTo(weakSelf);
-        make.bottom.equalTo(weakSelf).with.mas_offset(@-30);
-    }];
 }
 
 - (void) setBtnFrame{
@@ -125,28 +105,39 @@
 - (void)showAnimation
 {
 //    self.cancelButton.zx_y = ZXScreenH;
+    
     for (int i = 0; i < self.buttons.count; i ++) {
         UIButton *button = self.buttons[i];
         button.alpha = 0.0;
         [UIView animateWithDuration:0.4 delay: i * 0.05 usingSpringWithDamping:0.7 + 0.03 * i initialSpringVelocity:20 options:UIViewAnimationOptionAllowUserInteraction  animations:^{
             button.transform = CGAffineTransformMakeTranslation(0, - kOffsetY);
             button.alpha = 1.0;
+            
         } completion:^(BOOL finished) {
             if (i == 2) {
                 [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:20 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-                    self.cancelButton.zx_y = ZXScreenH - self.cancelButton.zx_height - 37;
+//                    self.cancelButton.zx_y = ZXScreenH - self.cancelButton.zx_height - 37;
+                    
                 } completion:^(BOOL finished) {
 
                 }];
             }
         }];
+        
     }
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        _cancelButton.transform = CGAffineTransformMakeRotation(M_PI_2);
+        
+    }];
+    
 }
 
 - (void)dismissAnimation
 {
     //    self.cancelButtonBottonConstraint.constant = xl_scaleInY_iPhone6(0);
     //    self.tipButton.hidden = YES;
+//    _cancelButton.transform = CGAffineTransformMakeRotation(90);
     [UIView animateWithDuration:0.15 animations:^{
         self.cancelButton.zx_y = ZXScreenH;
     }];
@@ -159,6 +150,7 @@
         }];
     }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((0.15 + 0.04 * self.buttons.count) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        _cancelButton.transform = CGAffineTransformMakeRotation(M_PI_2);
         [self removeFromSuperview];
     });
 }
