@@ -49,9 +49,6 @@
             [self addSubview:btn];
         }
     }
-    
-    
-//    [self showAnimation];
     return self;
 }
 
@@ -104,8 +101,6 @@
 
 - (void)showAnimation
 {
-//    self.cancelButton.zx_y = ZXScreenH;
-    
     for (int i = 0; i < self.buttons.count; i ++) {
         UIButton *button = self.buttons[i];
         button.alpha = 0.0;
@@ -114,32 +109,19 @@
             button.alpha = 1.0;
             
         } completion:^(BOOL finished) {
-            if (i == 2) {
-                [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:20 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-//                    self.cancelButton.zx_y = ZXScreenH - self.cancelButton.zx_height - 37;
-                    
-                } completion:^(BOOL finished) {
-
-                }];
-            }
         }];
-        
     }
     
     [UIView animateWithDuration:0.4 animations:^{
         _cancelButton.transform = CGAffineTransformMakeRotation(M_PI_2);
-        
     }];
     
 }
 
 - (void)dismissAnimation
 {
-    //    self.cancelButtonBottonConstraint.constant = xl_scaleInY_iPhone6(0);
-    //    self.tipButton.hidden = YES;
-//    _cancelButton.transform = CGAffineTransformMakeRotation(90);
     [UIView animateWithDuration:0.15 animations:^{
-        self.cancelButton.zx_y = ZXScreenH;
+        self.cancelButton.transform = CGAffineTransformMakeRotation(M_PI_4);
     }];
     for (NSInteger i = self.buttons.count - 1; i >= 0; i --) {
         UIButton *button = self.buttons[i];
