@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChooseFoodTypeView : UIView
+@protocol ChooseFoodTypeViewDelegate
 
+-(void)clickBtnAction:(int)index;
+
+@end
+
+
+@interface ChooseFoodTypeView : UIView
+@property (nonatomic,weak) id Delegate;
 
 - (void)showAnimation;
 

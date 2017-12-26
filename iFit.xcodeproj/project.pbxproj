@@ -79,6 +79,7 @@
 		F5D91C381F8DFC9400449981 /* FootTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D91C361F8DFC9400449981 /* FootTableViewCell.m */; };
 		F5D91C391F8DFC9400449981 /* FootTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */; };
 		F5D91C3D1F8E031500449981 /* FootCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D91C3C1F8E031500449981 /* FootCategoryModel.m */; };
+		F5DFD35C1FF237A800BE2280 /* FoodChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DFD35B1FF237A800BE2280 /* FoodChoicesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +174,8 @@
 		F5D91C371F8DFC9400449981 /* FootTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FootTableViewCell.xib; sourceTree = "<group>"; };
 		F5D91C3B1F8E031500449981 /* FootCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootCategoryModel.h; sourceTree = "<group>"; };
 		F5D91C3C1F8E031500449981 /* FootCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootCategoryModel.m; sourceTree = "<group>"; };
+		F5DFD35A1FF237A800BE2280 /* FoodChoicesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodChoicesViewController.h; sourceTree = "<group>"; };
+		F5DFD35B1FF237A800BE2280 /* FoodChoicesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodChoicesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,23 +366,29 @@
 		F588A2501F7627FA00BCD61E /* 3_Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F588A2511F7627FA00BCD61E /* AddMenu */,
+				F588A2511F7627FA00BCD61E /* FoodChoices */,
 				F588A2521F7627FA00BCD61E /* Detail */,
 				F588A2531F7627FA00BCD61E /* Home */,
 			);
 			path = 3_Modules;
 			sourceTree = "<group>";
 		};
-		F588A2511F7627FA00BCD61E /* AddMenu */ = {
+		F588A2511F7627FA00BCD61E /* FoodChoices */ = {
 			isa = PBXGroup;
 			children = (
+				F5DFD3541FF2349900BE2280 /* Controller */,
+				F5DFD3561FF2349900BE2280 /* Model */,
+				F5DFD3551FF2349900BE2280 /* View */,
 			);
-			path = AddMenu;
+			path = FoodChoices;
 			sourceTree = "<group>";
 		};
 		F588A2521F7627FA00BCD61E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				F5DFD3581FF234A300BE2280 /* Controller */,
+				F5DFD3571FF234A300BE2280 /* Model */,
+				F5DFD3591FF234A300BE2280 /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -466,6 +475,50 @@
 				F5C71CFE1F8F0F2A0035DB72 /* FootModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F5DFD3541FF2349900BE2280 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFD35A1FF237A800BE2280 /* FoodChoicesViewController.h */,
+				F5DFD35B1FF237A800BE2280 /* FoodChoicesViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5DFD3551FF2349900BE2280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5DFD3561FF2349900BE2280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5DFD3571FF234A300BE2280 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5DFD3581FF234A300BE2280 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5DFD3591FF234A300BE2280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,6 +667,7 @@
 				F5150AC01FCC0A2000E89B68 /* UIColor+ZXExtension.h in Sources */,
 				F5150AC11FCC0A2000E89B68 /* UIColor+ZXExtension.m in Sources */,
 				F5150AC21FCC0A2000E89B68 /* UIImage+ZXExtension.h in Sources */,
+				F5DFD35C1FF237A800BE2280 /* FoodChoicesViewController.m in Sources */,
 				F5150AC31FCC0A2000E89B68 /* UIImage+ZXExtension.m in Sources */,
 				F5150AC41FCC0A2000E89B68 /* UIImageView+XLExtension.m in Sources */,
 				F5150AC51FCC0A2000E89B68 /* UIImageView+ZXExtension.h in Sources */,

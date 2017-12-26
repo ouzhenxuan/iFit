@@ -22,6 +22,8 @@
 @property (nonatomic,strong) UIButton * cancelButton;
 
 @property (nonatomic,strong) NSArray * buttons;
+
+
 @end
 
 @implementation ChooseFoodTypeView
@@ -43,7 +45,7 @@
 
         [self setTheCancelBtn];
         
-        [self setBtnUI];
+        [self setBtns];
         [self setBtnFrame];
         for (UIButton * btn  in _buttons) {
             [self addSubview:btn];
@@ -74,12 +76,19 @@
     [_cancelButton addTarget:self action:@selector(cancelBtnClickEvent:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void) setBtnUI{
+- (void) setBtns{
     [_breakfastBtn setImage:[UIImage imageNamed:@"breakfast"] forState:UIControlStateNormal];
     [_lunchBtn setImage:[UIImage imageNamed:@"lunch"] forState:UIControlStateNormal];
     [_dinnerBtn setImage:[UIImage imageNamed:@"dinner"] forState:UIControlStateNormal];
     [_snackBtn setImage:[UIImage imageNamed:@"snack"] forState:UIControlStateNormal];
     [_waterBtn setImage:[UIImage imageNamed:@"sport"] forState:UIControlStateNormal];
+    
+    [_breakfastBtn addTarget:self action:@selector(clickAddFoodEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [_lunchBtn addTarget:self action:@selector(clickAddFoodEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [_dinnerBtn addTarget:self action:@selector(clickAddFoodEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [_snackBtn addTarget:self action:@selector(clickAddFoodEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [_waterBtn addTarget:self action:@selector(clickAddFoodEvent:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void) setBtnFrame{
@@ -96,6 +105,7 @@
         row = i / columns;
         column = i % columns;
         tempButton.frame = CGRectMake(leftMargin + (buttonWidth + landscapeInsetMargin) * column, top + row * (buttonHeight + portraitInsetMargin)  + kOffsetY, buttonWidth, buttonHeight);
+        tempButton.tag = i + 100;
     }
 }
 
@@ -131,14 +141,27 @@
             button.alpha = 0.0;
         }];
     }
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((0.15 + 0.04 * self.buttons.count) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         _cancelButton.transform = CGAffineTransformMakeRotation(M_PI_2);
         [self removeFromSuperview];
+        
     });
+    
 }
 
 - (void)cancelBtnClickEvent:(UIButton * )btn{
     [self dismissAnimation];
+}
+
+- (void)clickAddFoodEvent:(UIButton * )btn{
+    
+    [self dismissAnimation];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((0.15 + 0.04 * self.buttons.count)  * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if ([_Delegate respondsToSelector:@selector(clickBtnAction:)]) {
+            [self.Delegate clickBtnAction:(int)btn.tag];
+        }
+    });
 }
 
 

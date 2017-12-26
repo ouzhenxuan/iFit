@@ -8,14 +8,13 @@
 
 #import "HomeViewController.h"
 #import "PreviewView.h"
-//#import "UIColor+HexColor.h"
 #import "UIColor+ZXExtension.h"
 #import "FootTableView.h"
 #import "PSDrawerManager.h"
 #import "ChooseFoodTypeView.h"
-#import "ChooseFoodTypeView.h"
+#import "FoodChoicesViewController.h"
 
-@interface HomeViewController () <UIScrollViewDelegate>
+@interface HomeViewController () <UIScrollViewDelegate,ChooseFoodTypeViewDelegate>
 //view
 @property (nonatomic,strong) UIScrollView * scrollView;
 @property (nonatomic,strong) UIView * grayView;
@@ -56,6 +55,10 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 
+    
+//    FoodChoicesViewController * vc = [[FoodChoicesViewController alloc] init];
+//
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -99,6 +102,7 @@
 - (void)btnClick:(UIButton *)btn{
     ChooseFoodTypeView * chooseFoodTypeView = [[ChooseFoodTypeView alloc] initWithFrame:CGRectMake(0, 0, ZXScreenW, ZXScreenH)];
     [ZXKeyWindow addSubview:chooseFoodTypeView];
+    chooseFoodTypeView.Delegate = self;
     [chooseFoodTypeView showAnimation];
 }
 
@@ -160,9 +164,6 @@
 }
 
 
-
-
-
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -190,6 +191,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma choosefoodtypeView Delegate
+- (void)clickBtnAction:(int)index{
+    FoodChoicesViewController * vc = [[FoodChoicesViewController alloc] init];
+
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
